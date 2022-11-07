@@ -5,12 +5,12 @@
                 style="margin-top: -3px" />
         </a>
         <ul class="nav-item">
-            <li  class="menu inicio"> <a href="<?php echo URL_SERVER?>">INICIO</a></li>
+            <li  class="menu "> <a href="<?php echo URL_SERVER?>">INICIO</a></li>
             <li id="servicios" class="menu"> <a href="<?php echo URL_SERVER?>products">PRODUCTOS </a></li>
             <li id="pagos" class="menu"> <a>PAGOS</a></li>
             <li id="contacto" class="menu"> <a>CONTACTO</a> </li>
         </ul>
-        <span class="car-shopping">
+        <span class="car-shopping me-3 me-md-5">
             <span class="counter">
                 6
             </span>
@@ -20,7 +20,7 @@
                 </path>
             </svg>
         </span>
-        <span id="menu-bar" class="car-shopping ms-4 me-2 ">
+        <span id="menu-bar" class="car-shopping me-2 ">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
@@ -59,8 +59,8 @@
 
         </div>
         <ul class=" mb-4 ">
-            <li id="inicio" class="appear-animation" data-class-appear="appear-delay-2">menu1 </li>
-            <li class="appear-animation" data-class-appear="appear-delay-3">menu2</li>
+            <li id="inicio" class="appear-animation " data-class-appear="appear-delay-2"><a href="<?php echo URL_SERVER?>">INICIO</a> </li>
+            <li class="appear-animation" data-class-appear="appear-delay-3"><a href="<?php echo URL_SERVER?>products">PRODUCTOS </a></li>
             <li class="appear-animation" data-class-appear="appear-delay-4">menu3</li>
             <li class="appear-animation" data-class-appear="appear-delay-5">menu4</li>
             <li class="appear-animation" data-class-appear="appear-delay-6">menu5</li>
@@ -79,7 +79,7 @@
                                     role="presentation">
                                     <svg aria-hidden="true" focusable="false" role="presentation"
                                         class="icon icon--wide " viewBox="0 0 28 16">
-                                        <path d="M1.57 1.59l12.76 12.77L27.1 1.59" stroke-width="2" stroke="#000"
+                                        <path d="M1.57 1.59l12.76 12.77L27.1 1.59" stroke-width="2"  
                                             fill="none" fill-rule="evenodd"></path>
                                     </svg>
                                 </span>

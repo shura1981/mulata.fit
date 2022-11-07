@@ -32,6 +32,8 @@ async function modalMenu(evt) {
     } else {
         //Se cierra
         list.forEach(i => i.classList.remove("show"));
+        document.getElementById("Linklist-6").classList.remove("is-open");
+        document.querySelector(".icon").classList.remove("icon-chevron-down");
     }
 
 
@@ -69,7 +71,7 @@ window.addEventListener('scroll', function (e) {
         }
     }
     // const heigth = document.querySelector("#mainblock").clientHeight;
-    if (alturaAnimada  < scrollTop) nav.classList.add("nav-animated");
+    if (alturaAnimada < scrollTop) nav.classList.add("nav-animated");
     else nav.classList.remove("nav-animated");
 });
 inicioList.forEach(btn => {

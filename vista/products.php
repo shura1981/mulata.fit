@@ -14,13 +14,10 @@ $p= new Productos();
     <?php include "./vista/partials/links.php" ?>
     <link rel="stylesheet" href="<?php echo URL_VISTA?>css/productos.css?v=<?php echo VERSION?>" />
     <style>
+    .nav {
+        z-index: 4;
+    }
 
-
- 
-
-.nav {
-z-index: 4;
-}
     .contador {
         background: rgb(252, 70, 107);
         background: linear-gradient(128deg, rgba(252, 70, 107, 1) 0%, #f1266b 100%);
@@ -49,9 +46,10 @@ z-index: 4;
             margin-top: 70px;
 
         }
+
         .mySwiper2 {
-    margin-top: 0px !important;
-}
+            margin-top: 0px !important;
+        }
 
 
     }
@@ -157,7 +155,7 @@ z-index: 4;
 
     <!-- sesión asesoría -->
 
-    <div class="asesoria d-none" >
+    <div class="asesoria d-none">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 text-uppercase">
@@ -173,7 +171,7 @@ z-index: 4;
 
 
     <!-- sesión contador de promo -->
-    <div class="contador d-none" >
+    <div class="contador d-none">
         <div class="container-fluid py-2">
             <div class="row">
                 <div class="col-12">
@@ -473,7 +471,7 @@ z-index: 4;
     var productos =
         JSON.parse(
             <?= json_encode($p->ProductosDisponibles(),JSON_HEX_QUOT | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_NUMERIC_CHECK) ?>
-            );
+        );
     var tempProductos = productos;
     console.log(productos);
     </script>
