@@ -32,6 +32,7 @@
 <script defer type="text/javascript" src="<?php echo URL_VISTA?>js/sweetalert2@11/sweetalert2@11.js"></script>
 <script> const host=<?= json_encode(URL_VISTA,JSON_HEX_QUOT | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_NUMERIC_CHECK) ?>; </script>
 <script> const version=<?= json_encode(VERSION,JSON_HEX_QUOT | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_NUMERIC_CHECK) ?>; </script>
+<script> const dominio = <?= json_encode(URL_SERVER,JSON_HEX_QUOT | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS) ?>; </script>
 <script defer type="text/javascript" src="<?php echo URL_VISTA?>js/menu.js?v=<?php echo VERSION?>"></script>
 <script>
 // http://paulirish.com/2011/requestanimationframe-for-smart-animating/

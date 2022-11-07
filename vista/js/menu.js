@@ -43,6 +43,7 @@ modal.addEventListener("click", modalMenu);
 document.getElementById("menu-bar").addEventListener("click", modalMenu);
 document.getElementById("collapse").addEventListener("click", collapse);
 const nav = document.querySelector(".nav");
+
 window.addEventListener('scroll', function (e) {
     const scrollTop = document.documentElement.scrollTop;
     const alturaAnimada = nav.offsetTop;

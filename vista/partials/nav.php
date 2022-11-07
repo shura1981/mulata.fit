@@ -5,12 +5,39 @@
                 style="margin-top: -3px" />
         </a>
         <ul class="nav-item">
-            <li  class="menu "> <a href="<?php echo URL_SERVER?>">INICIO</a></li>
-            <li id="servicios" class="menu"> <a href="<?php echo URL_SERVER?>products">PRODUCTOS </a></li>
+            <li class="menu "> <a href="<?php echo URL_SERVER?>">INICIO</a></li>
+            <li id="servicios" class="menu">
+                <a href="<?php echo URL_SERVER?>products">TIENDA </a>
+                <svg aria-hidden="true" focusable="false" role="presentation" viewBox="0 0 28 16">
+                    <path d="M1.57 1.59l12.76 12.77L27.1 1.59" stroke-width="2" fill="none" fill-rule="evenodd"></path>
+                </svg>
+                <ul class="submenu">
+                    <li><a href="<?php echo URL_SERVER?>products?category=perdidapeso">Control de peso </a></li>
+                    <li>    <a href="<?php echo URL_SERVER?>products?category=modulosproteicos">Ganar masa muscular </a></li>
+                    <li> <a href="<?php echo URL_SERVER?>products?category=hipercaloricos">Hipercalóricos</a></li>
+                    <li><a href="<?php echo URL_SERVER?>products?category=energiarecuperacion">Aminoácidos </a></li>
+                </ul>
+                
+                
+               
+            </li>
+            <li class="menu"> <a href="<?php echo URL_SERVER?>#info-servicios">
+                    ASESORÍAS</a>
+                    <svg aria-hidden="true" focusable="false" role="presentation" viewBox="0 0 28 16">
+                    <path d="M1.57 1.59l12.76 12.77L27.1 1.59" stroke-width="2" fill="none" fill-rule="evenodd"></path>
+                </svg>
+                <ul class="submenu width160">
+                    <li>Glúteos 24kl</li>
+                    <li>Asesoría nutricional</li>
+                    <li>Entrenamiento</li>
+                </ul>
+
+
+            </li>
             <li id="pagos" class="menu"> <a>PAGOS</a></li>
-            <li id="contacto" class="menu"> <a>CONTACTO</a> </li>
+            <li id="contacto" class="menu"> <a href="<?php echo URL_SERVER?>#contacto-info">CONTACTO</a> </li>
         </ul>
-        <span class="car-shopping me-3 me-md-5">
+        <span id="showCard" class="car-shopping me-3 me-md-5">
             <span class="counter">
                 6
             </span>
@@ -59,11 +86,15 @@
 
         </div>
         <ul class=" mb-4 ">
-            <li id="inicio" class="appear-animation " data-class-appear="appear-delay-2"><a href="<?php echo URL_SERVER?>">INICIO</a> </li>
-            <li class="appear-animation" data-class-appear="appear-delay-3"><a href="<?php echo URL_SERVER?>products">PRODUCTOS </a></li>
-            <li class="appear-animation" data-class-appear="appear-delay-4">menu3</li>
+            <li id="inicio" class="appear-animation " data-class-appear="appear-delay-2"><a
+                    href="<?php echo URL_SERVER?>">INICIO</a> </li>
+            <li class="appear-animation" data-class-appear="appear-delay-3"><a
+                    href="<?php echo URL_SERVER?>products">TIENDA </a></li>
+            <li class="appear-animation" data-class-appear="appear-delay-4"><a
+                    href="<?php echo URL_SERVER?>#info-servicios">ASESORÍAS</a></li>
             <li class="appear-animation" data-class-appear="appear-delay-5">menu4</li>
-            <li class="appear-animation" data-class-appear="appear-delay-6">menu5</li>
+            <li class="appear-animation" data-class-appear="appear-delay-6"> <a
+                    href="<?php echo URL_SERVER?>#contacto-info">CONTACTO</a></li>
             <li class="appear-animation" data-class-appear="appear-delay-7">
 
                 <div class="mobile-nav__has-sublist">
@@ -79,8 +110,8 @@
                                     role="presentation">
                                     <svg aria-hidden="true" focusable="false" role="presentation"
                                         class="icon icon--wide " viewBox="0 0 28 16">
-                                        <path d="M1.57 1.59l12.76 12.77L27.1 1.59" stroke-width="2"  
-                                            fill="none" fill-rule="evenodd"></path>
+                                        <path d="M1.57 1.59l12.76 12.77L27.1 1.59" stroke-width="2" fill="none"
+                                            fill-rule="evenodd"></path>
                                     </svg>
                                 </span>
                             </span>

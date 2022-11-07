@@ -643,6 +643,20 @@ DisplayList(productos, list_element, rows, current_page);
 SetupPagination(productos, pagination_element, rows);
 lazyLoad();
 }
+const findobjwomen= ()=>{
+    productos= tempProductos.filter(item=>{
+  return item.codigo==100517 || item.codigo== 103030 ||
+  item.codigo== 10202612 ||
+  item.codigo== 102033 ||
+  item.codigo== 102060 ||
+  item.codigo== 100520 ||
+  item.codigo== 102061  
+  
+  });
+  DisplayList(productos, list_element, rows, current_page);
+  SetupPagination(productos, pagination_element, rows);
+  lazyLoad();
+  }
 const findctgmodulos= ()=>{
 productos= tempProductos.filter(item=>{
 return item.codigo== 100520||
@@ -1129,7 +1143,8 @@ hipercaloricos: findhipercaloricos,
 nutriciongeneral: findnutriciong,
 energiarecuperacion:findenergia,
 snacks: findsnacks,
-bipro: bipro
+bipro: bipro,
+women: findobjwomen
 }
 var category=getUrlParameter('category');
 if(category) filterQueryParam[category]();

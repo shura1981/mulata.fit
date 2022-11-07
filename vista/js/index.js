@@ -295,5 +295,94 @@ btnsGrid.forEach(btn => btn.addEventListener("click", openPost))
 const btnMulata = document.getElementById("sobremulata");
 btnMulata.addEventListener("click", openInfo);
 
+function validateForm() {
+  let isDataValid = true;
+  let statusMessage = '';
+
+  const name = document.getElementById('name').value;
+  if (name == "") {
+    statusMessage += `<p class="note note-danger"><strong>Name</strong> cannot be empty</p>`;
+    isDataValid = false;
+  };
+
+  const email = document.getElementById('email').value;
+  if (email == "") {
+    statusMessage += `<p class="note note-danger"><strong>Email</strong> cannot be empty</p>`;
+    isDataValid = false;
+  } else {
+    const re =
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<p>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    if (!re.test(email)) {
+      statusMessage += `<p class="note note-danger"><strong>Email</strong> is invalid</p>`;
+      isDataValid = false;
+    }
+  }
+
+  const subject = document.getElementById('subject').value;
+  if (subject == "") {
+    statusMessage += `<p class="note note-danger"><strong>Subject</strong> cannot be empty</p>`;
+    isDataValid = false;
+  }
+  const message = document.getElementById('message').value;
+  if (message == "") {
+    statusMessage += `<p class="note note-danger"><strong>Subject</strong> cannot be empty</p>`;
+    isDataValid = false;
+  }
+
+  return {
+    isDataValid,
+    statusMessage
+  };
+}
+
+const form = document.querySelector('form');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const formData = new FormData(e.target);
+
+  const {
+    isDataValid,
+    statusMessage
+  } = validateForm();
+
+  if (!isDataValid) {
+    document.getElementById('status').innerHTML = statusMessage;
+    return;
+  } else {
+    document.getElementById('status').innerHTML = `<p class="note note-light">Sending mail...</p>`;
+  }
+
+  const url = `${dominio}mail.php`;
+  console.log(url);
+  fetch(url, {
+    method: 'POST',
+    body: formData
+  })
+    .then(response => response.json())
+    .then(response => {
+      if (response.code) {
+        // If mail was sent successfully, reset the form;
+        const values = document.querySelectorAll('.form-control');
+        values.forEach(value => {
+          value.textContent = '';
+        });
+
+        document.getElementById('status').innerHTML =
+          `<p class="note note-success">${response.message}</p>`;
+        setTimeout(() => {
+          document.getElementById('status').innerHTML = '';
+        }, 5000)
+      } else {
+        document.getElementById('status').innerHTML =
+          `<p class="note note-danger">${response.message}</p>`;
+      }
+    })
+    .catch((err) => {
+      console.log(err.message);
+    });
+});
 
 

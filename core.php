@@ -16,5 +16,5 @@ const URL_BLOG="http://localhost/mulata.fit/blog/";
 // const URL_BLOG="http://192.168.80.15/mulata.fit/blog/";
 
 
-const VERSION=3.7;
+const VERSION=3.8;
 date_default_timezone_set('America/Bogota');

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
-      <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
     <title>Mulata Fit | Las mejores asesorías</title>
     <link rel="preload" as="style" href="<?php echo URL_VISTA?>css/index.css?v=<?php echo VERSION?>" />
     <?php include "./vista/partials/metas.php" ?>
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="<?php echo URL_VISTA?>css/footer.css?v=<?php echo VERSION?>" />
     <script defer type="text/javascript" src="<?php echo URL_VISTA?>js/index.js?v=<?php echo VERSION?>"></script>
 </head>
+
 <body>
     <?php include "./vista/partials/nav.php" ?>
     <div style="position: relative; background: var(--footer);" class="swiper mySwiper2">
@@ -120,7 +122,7 @@
 
 
     </div>
-       <div id="info-servicios">
+    <div id="info-servicios">
 
         <div class="item-info   observer" data-observer-transition="show">
             <div class="text-center-md">
@@ -362,18 +364,20 @@
             <p class="text-white">
                 Glutamina, BCCA'S, pre entrenos y mucho más.
             </p>
-            <button type="button" class="btn bg-sucess-yellow-light btn-rounded mt-3 inicio " style="color:white">Ver
-                Más</button>
+            <a href="<?php echo URL_SERVER?>products?category=energiarecuperacion" role="button"
+                class="btn bg-sucess-yellow-light btn-rounded mt-3" style="color:white">Ver
+                Más</a>
         </div>
         <div class="grid-item item2 observer-right"
             style="background-image: url('<?php echo URL_VISTA?>img/grid/grid2.webp');"
             data-observer-transition="show-right" data-observer-delay="0.3s">
 
-            <h2>Proteínas límpias </h2>
+            <h2>Ganar masa muscular </h2>
             <p class="text-light">
                 La mejor proteína con el mayor valor biológico en todas sus presentaciones.
             </p>
-            <button type="button" class="btn btn-light btn-rounded mt-3 inicio">Ver Más</button>
+            <a role="button" href="<?php echo URL_SERVER?>products?category=modulosproteicos"
+                class="btn btn-light btn-rounded mt-3 ">Ver Más</a>
 
 
         </div>
@@ -384,7 +388,8 @@
             <p class="text-light">
                 Especiales para personas delgadas que requieren más calorías en su proceso de crecimiento muscular.
             </p>
-            <button type="button" class="btn bg-sucess-light btn-rounded mt-3 inicio">Ver Más</button>
+            <a href="<?php echo URL_SERVER?>products?category=hipercaloricos" role="button"
+                class="btn bg-sucess-light btn-rounded mt-3 ">Ver Más</a>
 
         </div>
         <div class="grid-item item4 observer-right"
@@ -394,7 +399,8 @@
             <p>
                 Proteínas con colágeno hidrolizado y especializadas para el metabolismo de las mujeres.
             </p>
-            <button type="button" class="btn bg-sucess btn-rounded mt-3 inicio">Ver Más</button>
+            <a role="button" class="btn bg-sucess btn-rounded mt-3 "
+                href="<?php echo URL_SERVER?>products?category=women">Ver Más</a>
 
         </div>
         <div class="grid-item item5 observer-right"
@@ -406,7 +412,8 @@
             <p class="text-light">
                 La mejor creatina para aumentar el rendimiento físico.
             </p>
-            <button type="button" class="btn bg-sucess-red-light btn-rounded mt-3 inicio">Ver Más</button>
+            <a href="<?php echo URL_SERVER?>products?category=energiarecuperacion" role="button"
+                class="btn bg-sucess-red-light btn-rounded mt-3">Ver Más</a>
 
 
         </div>
@@ -418,7 +425,8 @@
             <p class="text-light">
                 Quemadores de grasa, proteínas para remplazar comidas, suplementos para cuidar la masa muscular.
             </p>
-            <button type="button" class="btn bg-sucess-blue-light btn-rounded mt-3 inicio">Ver Más</button>
+            <a role="button" href="<?php echo URL_SERVER?>products?category=perdidapeso"
+                class="btn bg-sucess-blue-light btn-rounded mt-3 ">Ver Más</a>
 
         </div>
 
@@ -554,7 +562,7 @@
         </div>
     </div>
     <div id="imc">
-     </div>
+    </div>
     <div id="contacto-info" style="background-image: url('<?php echo URL_VISTA?>img/slides/slide-1.webp');">
         <div class="mask-services degrade5"></div>
         <div class="container relative my-4">
@@ -562,7 +570,7 @@
                 <div class="col-12 col-md-8 my-4">
                     <h3 class=" text-center">Si tienes alguna inquitud</h3>
                     <h1 class="mb-4 pb-2 text-center font-italic">¡No dudes es escribirme!</h1>
-                    <form id="form">
+                    <form id="form" action="mail.php" method="POST">
                         <!-- Name input -->
                         <div class="form-outline mb-4">
                             <input required type="text" id="name" name="name" class="form-control" />
@@ -594,7 +602,7 @@
                         </button>
 
                         <!-- Status message -->
-                        <div id="status"></div>
+                        <div id="status" class="py-3"></div>
                     </form>
 
                 </div>
@@ -607,7 +615,7 @@
     </div>
     <div id="redes-sociales">
 
-     </div>
+    </div>
     <footer>
         <div class="container">
             <div class="row">
@@ -661,10 +669,14 @@
                         class="btn btn-primary btn-center my-3 my-md-0 d-block d-md-inline mx-auto">
                         Enviar
                     </button>
+                           <!-- Status message -->
+                           <div id="status"></div>
                 </div>
             </div>
         </div>
     </footer>
     <?php include "./vista/partials/particules.php" ?>
- </body>
+    <?php include "./vista/partials/schema_home.php" ?>
+</body>
+
 </html>

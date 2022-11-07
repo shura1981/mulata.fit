@@ -14,7 +14,7 @@ li {
 
 /* menú  - nav*/
 .nav-animated {
- 
+
   background-color: var(--footer) !important;
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
   padding-top: .5625rem;
@@ -81,7 +81,7 @@ li {
   align-items: center;
   margin: 0;
   padding: 0 30px;
-  width: 403px;
+  /* width: 403px; */
   justify-content: space-evenly;
 }
 
@@ -95,7 +95,7 @@ li {
   color: rgb(255, 255, 255);
 }
 
-.nav-item li a:hover {
+.nav-item li:hover a {
   color: var(--colorSecondary) !important;
 }
 
@@ -112,6 +112,7 @@ li.menu {
 
 li.menu a {
   text-align: center;
+  font-weight: 600;
 }
 
 #inicio::before {
@@ -130,7 +131,7 @@ nav.nav-animated li.menu::before {
   background: var(--colorPrimary);
 }
 
-nav.nav-animated .nav-item li a:hover {
+nav.nav-animated .nav-item li:hover a {
   color: var(--colorPrimary) !important;
 }
 
@@ -196,6 +197,8 @@ li.menu:hover:before {
 }
 
 
+
+
 .car-shopping:hover {
   cursor: pointer;
   stroke: var(--colorSecondary);
@@ -215,6 +218,7 @@ span.counter {
   border-radius: 50%;
   font-size: 80%;
 }
+
 
 /* end car shopping */
 
@@ -262,6 +266,47 @@ span.counter {
   transition: transform 1s cubic-bezier(.165, .84, .44, 1) .58s, opacity 1s cubic-bezier(.165, .84, .44, 1) .68s;
 }
 
+
+nav.nav-animated .nav-item li:hover svg {
+  stroke: var(--colorPrimary) !important;
+}
+
+.menu svg {
+  width: 10px;
+  height: 10px;
+  stroke: white;
+
+}
+
+
+ul.submenu {
+  position: absolute;
+  left: 0;
+  background: var(--footer);
+  z-index: 1;
+  width: 180px;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.26s ease;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.085) !important;
+}
+
+.width160 {
+  width: 160px !important;
+}
+
+.menu:hover>ul.submenu {
+  transform: scaleY(1);
+}
+
+ul.submenu li {
+  padding: 0.2rem 0.5rem;
+}
+
+ul.submenu li:hover {
+  background: rgba(255, 255, 255, 0.137);
+
+}
 
 /* end animation menu */
 
@@ -455,7 +500,7 @@ span.counter {
   display: flex;
 }
 
-.mobile-nav__link--button svg path{
+.mobile-nav__link--button svg path {
   stroke: var(--colorPrimary);
 }
 
@@ -568,3 +613,8 @@ span.counter {
 }
 
 /* end swal2 */
+
+.note-success {
+  background-color: #e91e63a6;
+  border-color: rgb(255, 255, 255);
+}

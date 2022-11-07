@@ -13,6 +13,12 @@ $p= new Productos();
     <title>Productos</title>
     <?php include "./vista/partials/links.php" ?>
     <link rel="stylesheet" href="<?php echo URL_VISTA?>css/productos.css?v=<?php echo VERSION?>" />
+    <link rel="stylesheet" href="<?php echo URL_VISTA?>ecommerceNutra/carrito/index.css?v=<?php echo VERSION?>" />
+    <script defer type="text/javascript" src="<?php echo URL_VISTA?>ecommerceNutra/carrito/index.js"></script>
+    <script defer type="text/javascript" src="<?php echo URL_VISTA?>js/toast.min.js"></script>
+    <!-- <script defer type="text/javascript" src="<?php echo URL_VISTA?>/ecommerceNutra/findProduct/index.js"></script> -->
+
+
     <style>
     .nav {
         z-index: 4;
