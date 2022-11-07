@@ -1,0 +1,139 @@
+Bienvenidos Mi nombre es:Sunny doria Vargas Madre Empresaria Entrenadora personal certificada atleta @megaplexstart atleta élite @wbffentertainnment PRO Llevo más de 15 años dedicada a construir un estilo de vida saludable (ejercicios y buena alimentación) Quiero ayudarte a obtener  hábitos saludables duraderos en el tiempo, darte mis mejores tips  que me han dado resultado durante toda mi carrera deportiva, gracias a esto te voy ahorrar tiempo.
+Creo firmemente en el balance y lo disfruto al máximo con mis hijos,familia y amigos.Olvídate de los numero en la basculas no importa tu trayectoria deportiva juntas podemos lograr nuevos progresos, avances en tu vida mente y cuerpo sin  dietas restrictivas y entrenamientos acordé a tu nivel que disfrutaras al máximo.
+
+
+
+✅guía de alimentación basada en objetivo, preferencia alimenticias y los requerimientos  calóricos y nutricionales  asociados a ti.
+✅seguimientos con fotos medidas y pesos  manteniéndonos informada de resultado y sensaciones. 
+✅Guía de suplementación con evidencia científica. 
+✅entrenamientos con videos explicativos SEGUN TU PLAN  (casa o gym) adaptados a tu horio y capacidades físicas.
+✅#gluteos24kilates acompañamiento diario grupo privado en  telegram (solo para miembros) donde estaremos  siempre motivándonos y aclarando dudas
+✅#gluteos24kilstes entrenamientos en vivo todos los sábados (rutina grabada  con vínculo privado para los que no pueden asistir )para que podamos subir de nivel y quemar juntas.
+——————————————————————
+💢PLAN GLÚTEOS #gluteos24kiltes  ⤵️
+❓recuerda todo en este plan es grupal 
+
+Trabajaremos todo el cuerpo enfocado en glúteos  (iniciando plan) con todo el GRUPO por telegram , una vez realizas el pago se envía formulario de inscripción.. para continuar con la recomendación nutricional  y te prepares para el siguiente  nivel.
+👉🏽Se te envía rutina escrita para 4 semanas nombres,detalles del ejercicio y dibujos  (gym-casa)
+👉🏽videos de rutinas tren inferior cómo trabajar técnica y reps (casa - gym)
+👉🏽rutinas y videos en casa 
+👉🏽rutina en vivo todos los sábados 
+
+PRECIO :
+🇺🇸50 USD 4 semanas 
+🇨🇴180,0000 pesos colombianos 
+——————————————————————
+💢ENTRENAMIENTOS PERSONALIZADOS POR ZOOM ⤵️ #quemaconmigo 
+
+PRECIO:
+🇺🇸200 USD x 3 veces por semana+ rutina para toda la semana,trabajo de cuerpo completo, cardios y recomendación nutricional 
+——————————————————————
+💢ASESORIAS Y RUTINAS TOTALMENTE PERSONALIZADAS ⤵️ #glowup 
+
+PRECIOS :
+
+🇺🇸75 US D x mensuales 
+🇨🇴$280,000 pesos colombianos 
+
+🇺🇸 155 USD x 3 meses 
+🇨🇴$620,000 pesos colombianos
+
+
+Este  WhatsApp es único y exclusivo para información de asesorías.
+🆕plan perzonalizado workout by mulata 
+🆕plan glúteos 24 killates 4 semanas
+🆕una vez decidas ser parte del team.
+iniciamos con el pago y nos envías capture del mismo. 
+☑️Solo se reciben giros internacionales por PayPal  de lo contrario consúltame antes de realizar tu giro GRACIAS 
+
+1️⃣cuenta  Bancolombia
+  (Cristian Andrés Doria Vargas) 
+ahorro 91217217534
+2️⃣paypal :sunnydoriakyk@gmail.com
+3️⃣nequi 3127899708 
+4️⃣daviplata 3225210073 
+4️⃣Datos de consignación:
+Efecty-wéstern union 
+nombre : Sunny
+Apellidos Doria Vargas 
+Cc :55245715 
+Barranquilla -colombia
+
+
+
+//////////////
+
+  <div class="swiper mySwiper  observer" data-observer-transition="show">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"
+                        style="background-image: url('<?php echo URL_VISTA?>img/carousels/packages.webp'); background-size: cover; background-position: top center;  ">
+                        <div class="wrap-swiper">
+                            <h1>
+                                Asesorías Personalizadas
+                            </h1>
+                            <p>
+                                Todos somos diferentes: tenemos distintas composiciones, diferentes estilos de vida,
+                                diferentes
+                                objetivos y niveles de entrenamiento. Nada mejor que un plan que se adapte a ti y a tus
+                                necesidades.
+                            </p>
+                        </div>
+
+
+
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image: url('<?php echo URL_VISTA?>img/carousels/packages.webp'); background-size: cover; background-position: top center;  ">
+                        <div class="wrap-swiper">
+                            <h1>
+                                Asesorías Personalizadas
+                            </h1>
+                            <p>
+                                Todos somos diferentes: tenemos distintas composiciones, diferentes estilos de vida,
+                                diferentes
+                                objetivos y niveles de entrenamiento. Nada mejor que un plan que se adapte a ti y a tus
+                                necesidades.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image: url('<?php echo URL_VISTA?>img/carousels/facility.webp'); background-size: cover; background-position: top center;  ">
+                        <div class="wrap-swiper">
+                            <h1>
+                                Asesorías Personalizadas
+                            </h1>
+                            <p>
+                                Todos somos diferentes: tenemos distintas composiciones, diferentes estilos de vida,
+                                diferentes
+                                objetivos y niveles de entrenamiento. Nada mejor que un plan que se adapte a ti y a tus
+                                necesidades.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image: url('<?php echo URL_VISTA?>img/carousels/classes.webp'); background-size: cover; background-position: top center;  ">
+                        <div class="wrap-swiper">
+                            <h1>
+                                Asesorías Personalizadas
+                            </h1>
+                            <p>
+                                Todos somos diferentes: tenemos distintas composiciones, diferentes estilos de vida,
+                                diferentes
+                                objetivos y niveles de entrenamiento. Nada mejor que un plan que se adapte a ti y a tus
+                                necesidades.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+
+////////////
+
+
+
+style="background-image: url('<?php echo URL_VISTA?>img/carousels/packages.webp'); background-size: cover; background-position: top center;  "

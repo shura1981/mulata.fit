@@ -1,0 +1,21 @@
+
+# Impedir que se pueda ver el listado de contenidos de un directorio
+Options All -Indexes
+# Url Amigables
+Options +FollowSymLinks
+RewriteEngine On
+ErrorDocument 404 http://localhost/mulata.fit/vista/404
+#ErrorDocument 404 https://mulata.fit/vista/404
+#RewriteCond %{HTTPS}  !=on 
+#RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R,L] 
+
+RewriteRule ^([-a-zA-Z0-9/]+)$ index.php?ruta=$1
+#RewriteRule ^blog/([-a-zA-Z0-9/]+)$ blog.php?ruta=$1
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+#RewriteRule ^([a-z]+)/?$ $1.php [NC]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html
+#RewriteRule ^([a-z]+)/?$ $1.html [NC]

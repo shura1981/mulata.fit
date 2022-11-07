@@ -1,0 +1,21 @@
+{
+    "liveServer.settings.AdvanceCustomBrowserCmdLine": "",
+    "liveSassCompile.settings.autoprefix": [],
+    "liveSassCompile.settings.includeItems": [],
+    "liveSassCompile.settings.excludeList": [
+
+
+
+        "**/node_modules/**",
+        ".vscode/**"
+    ],
+    "liveSassCompile.settings.generateMap": false,
+    "liveSassCompile.settings.formats": [
+
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath":  "vista/css/"
+        }
+    ]
+}

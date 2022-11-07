@@ -1,0 +1,69 @@
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<link rel="icon" href="<?php echo URL_VISTA?>/img/favicon.ico" type="image/x-icon" />
+<!-- preloads -->
+<!-- <link rel="preload" href="/img/logonutramerican-svg.webp" as="image">
+<link rel="preload" href="/img/bipro_megaplex2.webp" as="image">
+<link rel="preload" media="(max-width: 600px)" href="/video/loadtatianaburner.webp" as="image">
+<link rel="preload" media="(max-width: 600px)" href="/video/tatianaburner.mp4" as="video">
+<link rel="preload" media="(min-width: 601px)" href="/video/posterdesafio.webp" as="image">
+<link rel="preload" media="(min-width: 601px)" href="/video/desafio3.mp4" as="video"> -->
+<link href="<?php echo URL_VISTA?>fonts/Lato/stylesheet.css" rel="preload" as="style">
+<link rel="preload" as="style" href="<?php echo URL_VISTA?>css/mdb.min.css" />
+<link rel="preload" as="style" href="<?php echo URL_VISTA?>css/mdb.min.css" />
+<link rel="preload" as="style" href="<?php echo URL_VISTA?>css/swiper-bundle.min.css" />
+<link rel="preload" as="style" href="<?php echo URL_VISTA?>css/all.min.css" />
+<link href="<?php echo URL_VISTA?>js/mdb.min.js" rel="preload" as="script">
+<link rel="preload" as="style" href="<?php echo URL_VISTA?>css/menu.css?v=<?php echo VERSION?>" />
+<!-- end preloads -->
+
+<link href="<?php echo URL_VISTA?>fonts/Lato/stylesheet.css" rel="stylesheet">
+<link rel="stylesheet" href="<?php echo URL_VISTA?>css/root.css?v=<?php echo VERSION?>" />
+<link rel="stylesheet" href="<?php echo URL_VISTA?>css/swiper-bundle.min.css" />
+<link rel="stylesheet" href="<?php echo URL_VISTA?>css/mdb.min.css" />
+<link rel="stylesheet" href="<?php echo URL_VISTA?>css/all.min.css" />
+<link rel="stylesheet" href="<?php echo URL_VISTA?>css/menu.css?v=<?php echo VERSION?>" />
+
+<!-- <script defer type="text/javascript" src="<?php echo URL_VISTA?>js/gsap/gsap.min.js"></script> -->
+<script defer type="text/javascript" src="<?php echo URL_VISTA?>js/swiper-bundle.min.js"></script>
+<script defer type="text/javascript" src="<?php echo URL_VISTA?>js/mdb.min.js"></script>
+<script defer type="text/javascript" src="<?php echo URL_VISTA?>js/revelar.js"></script>
+<script defer type="text/javascript" src="<?php echo URL_VISTA?>js/sweetalert2@11/sweetalert2@11.js"></script>
+<script> const host=<?= json_encode(URL_VISTA,JSON_HEX_QUOT | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_NUMERIC_CHECK) ?>; </script>
+<script> const version=<?= json_encode(VERSION,JSON_HEX_QUOT | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_NUMERIC_CHECK) ?>; </script>
+<script defer type="text/javascript" src="<?php echo URL_VISTA?>js/menu.js?v=<?php echo VERSION?>"></script>
+<script>
+// http://paulirish.com/2011/requestanimationframe-for-smart-animating/
+// http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating
+// requestAnimationFrame polyfill by Erik Möller. fixes from Paul Irish and Tino Zijdel
+// MIT license
+(function() {
+    var lastTime = 0;
+    var vendors = ['ms', 'moz', 'webkit', 'o'];
+    for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+        window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
+        window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame'] ||
+            window[vendors[x] + 'CancelRequestAnimationFrame'];
+    }
+
+    if (!window.requestAnimationFrame)
+        window.requestAnimationFrame = function(callback, element) {
+            var currTime = new Date().getTime();
+            var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+            var id = window.setTimeout(function() {
+                    callback(currTime + timeToCall);
+                },
+                timeToCall);
+            lastTime = currTime + timeToCall;
+            return id;
+        };
+
+    if (!window.cancelAnimationFrame)
+        window.cancelAnimationFrame = function(id) {
+            clearTimeout(id);
+        };
+}());
+</script>
+<!-- smooth scroll behavior polyfill -->
+<script defer src="<?php echo URL_VISTA?>js/smoothscroll.js"></script>
