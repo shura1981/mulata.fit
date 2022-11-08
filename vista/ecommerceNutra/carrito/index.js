@@ -46,7 +46,10 @@ modalCart.classList.add("opened")
 const btnPagar= document.getElementById("pagar");
 btnPagar.addEventListener("click",()=>{
 const c= this.getcar();
-if(c.cantidad>0)window.location= host+"ecommerceNutra/checkout/index.html";
+if(c.cantidad>0){
+    modalCart.classList.remove("opened");
+    window.location= host+"ecommerceNutra/checkout/index.html";
+}
 })
 const loadLabelsCartButtons=()=>{
 const localcart= localStorage.getItem("carrito");

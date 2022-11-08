@@ -10,16 +10,22 @@ $p= new Productos();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos</title>
+    <title>Tienda mulata fit</title>
+    <?php include "./vista/partials/metaproducts.php" ?>
     <?php include "./vista/partials/links.php" ?>
     <link rel="stylesheet" href="<?php echo URL_VISTA?>css/productos.css?v=<?php echo VERSION?>" />
-    <link rel="stylesheet" href="<?php echo URL_VISTA?>ecommerceNutra/carrito/index.css?v=<?php echo VERSION?>" />
-    <script defer type="text/javascript" src="<?php echo URL_VISTA?>ecommerceNutra/carrito/index.js"></script>
     <script defer type="text/javascript" src="<?php echo URL_VISTA?>js/toast.min.js"></script>
     <!-- <script defer type="text/javascript" src="<?php echo URL_VISTA?>/ecommerceNutra/findProduct/index.js"></script> -->
 
 
     <style>
+    body {
+        background-color: var(--mulata-color-bg);
+        font-family: var(--font-family);
+        font-weight: normal;
+        font-style: normal;
+    }
+
     .nav {
         z-index: 4;
     }
@@ -57,6 +63,10 @@ $p= new Productos();
             margin-top: 0px !important;
         }
 
+        .close-info {
+           right: 5.2%;
+            top: 1.2%;
+        }
 
     }
 
@@ -72,6 +82,43 @@ $p= new Productos();
 
     span.badge.bg-danger.ms-2 {
         font-size: 1.1rem;
+    }
+
+
+    .list-group-item.media {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+    }
+
+    .list-group-item.media::before {
+        content: '';
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        z-index: 1;
+        position: absolute;
+
+    }
+
+    .media-item {}
+
+    .media-item p {
+        text-align: left;
+        padding: 0;
+        border-radius: 0;
+        text-transform: capitalize;
+        font-size: .8rem;
+        background: #0000;
+    }
+
+    .list-group-item:hover {
+        color: #292929;
+        background-color: #b6b6b61c;
+        transition: all 0.2s ease;
     }
     </style>
 
@@ -175,7 +222,20 @@ $p= new Productos();
         </div>
     </div>
 
+    <div class="contador">
+        <div class="container-fluid py-2">
+            <div class="row">
+                <div class="col-12">
+                    <p class="text-center mb-0">
+                        <strong>¡APROVECHA LA PROMO!</strong> Toda la suplementación con el
+                        <strong>10% OFF</strong>, con el cupón <strong>MULATA. </strong> <small
+                            class="font-weight-bold font-italic">Aplican términos y condiciones.</small>
+                    </p>
 
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- sesión contador de promo -->
     <div class="contador d-none">
         <div class="container-fluid py-2">
@@ -220,17 +280,9 @@ $p= new Productos();
 
                         <!--Section: Objetivos-->
                         <section class="text-muted card-panel mt-5">
-                            <div style="color: rgb(14, 14, 14); padding: .5rem;">
-                                <small class="text-center">Productos para planes nutricionales de:</small>
-                            </div>
+                            <p><strong>MEJORES VENTAS</strong></p>
                             <!-- <p><strong>OBJETIVOS</strong></p> -->
-                            <ul class="list-group list-group-flush">
-                                <li id="objperdergrasa" class="list-group-item">ADELGAZAR</li>
-                                <li id="objaumentom" class="list-group-item">GANAR MÚSCULO</li>
-                                <li id="objtsubirpeso" class="list-group-item">INCREMENTAR FUERZA</li>
-                                <li id="objdefinicion" class="list-group-item">TONIFICAR</li>
-                                <li id="objmantenimiento" class="list-group-item">MANTENIMIENTO</li>
-                                <li class="list-group-item all">Todos</li>
+                            <ul id="bestsales" class="list-group list-group-flush">
                             </ul>
 
 
@@ -596,6 +648,7 @@ $p= new Productos();
 
 
     <script src="<?php echo URL_VISTA?>js/tienda.js?v=<?php echo VERSION?>"></script>
+    <?php include "./vista/partials/schema_products.php" ?>
 </body>
 
 

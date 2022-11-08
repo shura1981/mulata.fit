@@ -13,17 +13,18 @@
                 </svg>
                 <ul class="submenu">
                     <li><a href="<?php echo URL_SERVER?>products?category=perdidapeso">Control de peso </a></li>
-                    <li>    <a href="<?php echo URL_SERVER?>products?category=modulosproteicos">Ganar masa muscular </a></li>
+                    <li> <a href="<?php echo URL_SERVER?>products?category=modulosproteicos">Ganar masa muscular </a>
+                    </li>
                     <li> <a href="<?php echo URL_SERVER?>products?category=hipercaloricos">Hipercalóricos</a></li>
                     <li><a href="<?php echo URL_SERVER?>products?category=energiarecuperacion">Aminoácidos </a></li>
                 </ul>
-                
-                
-               
+
+
+
             </li>
             <li class="menu"> <a href="<?php echo URL_SERVER?>#info-servicios">
                     ASESORÍAS</a>
-                    <svg aria-hidden="true" focusable="false" role="presentation" viewBox="0 0 28 16">
+                <svg aria-hidden="true" focusable="false" role="presentation" viewBox="0 0 28 16">
                     <path d="M1.57 1.59l12.76 12.77L27.1 1.59" stroke-width="2" fill="none" fill-rule="evenodd"></path>
                 </svg>
                 <ul class="submenu width160">
@@ -92,17 +93,15 @@
                     href="<?php echo URL_SERVER?>products">TIENDA </a></li>
             <li class="appear-animation" data-class-appear="appear-delay-4"><a
                     href="<?php echo URL_SERVER?>#info-servicios">ASESORÍAS</a></li>
-            <li class="appear-animation" data-class-appear="appear-delay-5">menu4</li>
-            <li class="appear-animation" data-class-appear="appear-delay-6"> <a
+            <li class="appear-animation" data-class-appear="appear-delay-5"> <a
                     href="<?php echo URL_SERVER?>#contacto-info">CONTACTO</a></li>
-            <li class="appear-animation" data-class-appear="appear-delay-7">
-
+            <li class="appear-animation" data-class-appear="appear-delay-6">
                 <div class="mobile-nav__has-sublist">
                     <button id="collapse" type="button" aria-controls="Linklist-6"
                         class="mobile-nav__link--button mobile-nav__link--top-level collapsible-trigger collapsible--auto-height is-open"
                         aria-expanded="true">
                         <span class="mobile-nav__faux-link">
-                            Ver más
+                            SUPLEMENTACIÓN
                         </span>
                         <div class="mobile-nav__toggle">
                             <span class="faux-button"><span
@@ -123,36 +122,36 @@
             </li>
         </ul>
 
-        <div id="Linklist-6" class="mb-4 mobile-nav__sublist collapsible-content collapsible-content--all"
-            style="height: 125px;">
+        <div id="Linklist-6" class="mb-4 mobile-nav__sublist collapsible-content collapsible-content--all">
             <div class="collapsible-content__inner">
                 <ul class="mobile-nav__sublist">
                     <li class="mobile-nav__item">
-                        <div class="mobile-nav__child-item"><a href="/pages/transformaciones-testimonios"
-                                class="mobile-nav__link" id="Sublabel-pages-transformaciones-testimonios1">
-                                Testimonios
-                            </a></div>
+                        <div class="mobile-nav__child-item">
+                            <a href="<?php echo URL_SERVER?>products?category=perdidapeso">Control de peso </a>
+                        </div>
                     </li>
                     <li class="mobile-nav__item">
-                        <div class="mobile-nav__child-item"><a href="/pages/suscripcion-beunlimited"
-                                class="mobile-nav__link" id="Sublabel-pages-suscripcion-beunlimited2">
-                                Ayuda
-                            </a></div>
+                        <div class="mobile-nav__child-item">
+
+                            <a href="<?php echo URL_SERVER?>products?category=modulosproteicos">Ganar masa muscular </a>
+                        </div>
                     </li>
                     <li class="mobile-nav__item">
-                        <div class="mobile-nav__child-item"><a
-                                href="https://beunlimited.silbebysilvy.com/packs#manage-subscription"
-                                class="mobile-nav__link"
-                                id="Sublabel-https-beunlimited-silbebysilvy-com-packs-manage-subscription3">
-                                Maneja tu suscripción
-                            </a></div>
+                        <div class="mobile-nav__child-item">
+                            <a href="<?php echo URL_SERVER?>products?category=hipercaloricos">Hipercalóricos</a>
+                        </div>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <div class="mobile-nav__child-item">
+                            <a href="<?php echo URL_SERVER?>products?category=energiarecuperacion">Aminoácidos</a>
+                        </div>
                     </li>
                 </ul>
             </div>
         </div>
 
 
-        <ul class="mobile-nav__social appear-animation " data-class-appear="appear-delay-8">
+        <ul class="mobile-nav__social appear-animation " data-class-appear="appear-delay-7">
             <li class="mobile-nav__social-item">
                 <a target="_blank" rel="noopener" href="https://www.instagram.com/mulatafit/"
                     title="silBe by Silvy en Instagram">

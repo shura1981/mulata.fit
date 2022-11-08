@@ -102,10 +102,10 @@ var swiper = new Swiper(".mySwiper", {
     loop: false,
     effect: "cube",
     grabCursor: true,
-    autoplay: {
-        delay: 4500,
-        disableOnInteraction: true,
-    },
+    // autoplay: {
+    //     delay: 4500,
+    //     disableOnInteraction: true,
+    // },
     cubeEffect: {
         shadow: true,
         slideShadows: true,

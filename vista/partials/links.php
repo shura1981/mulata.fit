@@ -16,6 +16,7 @@
 <link rel="preload" as="style" href="<?php echo URL_VISTA?>css/all.min.css" />
 <link href="<?php echo URL_VISTA?>js/mdb.min.js" rel="preload" as="script">
 <link rel="preload" as="style" href="<?php echo URL_VISTA?>css/menu.css?v=<?php echo VERSION?>" />
+<link rel="preconnect dns-prefetch" href="https://www.google-analytics.com">
 <!-- end preloads -->
 
 <link href="<?php echo URL_VISTA?>fonts/Lato/stylesheet.css" rel="stylesheet">
@@ -24,15 +25,23 @@
 <link rel="stylesheet" href="<?php echo URL_VISTA?>css/mdb.min.css" />
 <link rel="stylesheet" href="<?php echo URL_VISTA?>css/all.min.css" />
 <link rel="stylesheet" href="<?php echo URL_VISTA?>css/menu.css?v=<?php echo VERSION?>" />
-
+<link rel="stylesheet" href="<?php echo URL_VISTA?>ecommerceNutra/carrito/index.css?v=<?php echo VERSION?>" />
 <!-- <script defer type="text/javascript" src="<?php echo URL_VISTA?>js/gsap/gsap.min.js"></script> -->
 <script defer type="text/javascript" src="<?php echo URL_VISTA?>js/swiper-bundle.min.js"></script>
 <script defer type="text/javascript" src="<?php echo URL_VISTA?>js/mdb.min.js"></script>
 <script defer type="text/javascript" src="<?php echo URL_VISTA?>js/revelar.js"></script>
 <script defer type="text/javascript" src="<?php echo URL_VISTA?>js/sweetalert2@11/sweetalert2@11.js"></script>
-<script> const host=<?= json_encode(URL_VISTA,JSON_HEX_QUOT | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_NUMERIC_CHECK) ?>; </script>
-<script> const version=<?= json_encode(VERSION,JSON_HEX_QUOT | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_NUMERIC_CHECK) ?>; </script>
-<script> const dominio = <?= json_encode(URL_SERVER,JSON_HEX_QUOT | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS) ?>; </script>
+<script>
+const host =
+    <?= json_encode(URL_VISTA,JSON_HEX_QUOT | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_NUMERIC_CHECK) ?>;
+</script>
+<script>
+const version =
+    <?= json_encode(VERSION,JSON_HEX_QUOT | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_NUMERIC_CHECK) ?>;
+</script>
+<script>
+const dominio = <?= json_encode(URL_SERVER,JSON_HEX_QUOT | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS) ?>;
+</script>
 <script defer type="text/javascript" src="<?php echo URL_VISTA?>js/menu.js?v=<?php echo VERSION?>"></script>
 <script>
 // http://paulirish.com/2011/requestanimationframe-for-smart-animating/
@@ -68,3 +77,14 @@
 </script>
 <!-- smooth scroll behavior polyfill -->
 <script defer src="<?php echo URL_VISTA?>js/smoothscroll.js"></script>
+<script defer type="text/javascript" src="<?php echo URL_VISTA?>ecommerceNutra/carrito/index.js?v=<?php echo VERSION?>">
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9DG64H7P7P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9DG64H7P7P');
+</script>

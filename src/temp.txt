@@ -6,3 +6,14 @@
 
 
 // console.log(decodeURI(post.gluteos24k));
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9DG64H7P7P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9DG64H7P7P');
+</script>

@@ -4,7 +4,7 @@ import  { groupByMap, loadScript,getDate } from './utils.js';
 export default class Ecommerce{
 constructor(){
 this.urlConfirmation="https://www.nutramerican.com/api_MegaplexStar/api/confirmation.php";  
-this.urlResponse= "https://nutramerican.com/ecommerceNutra/response/index.html";  
+this.urlResponse= "https://mulata.fit/vista/ecommerceNutra/response/index.html";  
 this.carrito=[];
 this.carritoTemp=[];
 this.products=[];

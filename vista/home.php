@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Mulata Fit | Las mejores asesorías</title>
+    <title>Mulata Fit | Las mejores asesorías fitness</title>
     <link rel="preload" as="style" href="<?php echo URL_VISTA?>css/index.css?v=<?php echo VERSION?>" />
     <?php include "./vista/partials/metas.php" ?>
     <?php include "./vista/partials/links.php" ?>

@@ -449,7 +449,7 @@ ul.submenu li:hover {
   visibility: visible;
   opacity: 1;
   transition: opacity 1s cubic-bezier(.25, .46, .45, .94), max-height .35s cubic-bezier(.25, .46, .45, .94);
-  max-height: 500px;
+  max-height: 600px;
 }
 
 .collapsible-content--all {

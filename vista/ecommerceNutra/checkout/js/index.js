@@ -1,4 +1,4 @@
-import  Ecommerce from '../../index.js?v=20';
+import  Ecommerce from '../../index.js?v=22';
 const formatter = new Intl.NumberFormat('en-US', {style: 'currency',currency: 'USD', minimumFractionDigits: 0 })
 var eco= new Ecommerce();
 (async()=>{
