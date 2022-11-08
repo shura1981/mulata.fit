@@ -64,7 +64,7 @@ $p= new Productos();
         }
 
         .close-info {
-           right: 5.2%;
+            right: 5.2%;
             top: 1.2%;
         }
 
@@ -119,6 +119,19 @@ $p= new Productos();
         color: #292929;
         background-color: #b6b6b61c;
         transition: all 0.2s ease;
+    }
+
+    #bestsales [data-info]:hover,
+    [data-info]:focus {
+        color: #212121 !important;
+        background: #dcdcdc !important;
+    }
+
+    .text-muted {
+           color: var(--colorPrimary) !important;
+    }
+    .mask{
+        cursor: pointer;
     }
     </style>
 

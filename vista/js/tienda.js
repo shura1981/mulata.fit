@@ -90,8 +90,17 @@ const startCart = () => {
     btninfo.forEach(btn => {
       btn.addEventListener("click", e => {
         let codigo = 0;
+
+       
+        console.log(e.target, e.target.parentNode.parentNode );
         if (e.target.nodeName === "I") codigo = e.target.parentNode.dataset.info
         else codigo = e.target.dataset.info;
+
+         if(e.target.classList.contains("mask"))codigo= e.target.parentNode.parentNode.dataset.info;
+
+        console.log(codigo);
+        if(codigo==0 || codigo== undefined)return null;
+        
         const producto = tempProductos.find(p => p.codigo == codigo);
         const cerrar = () => {
           document.querySelector("body").classList.remove("noscroll")
@@ -253,10 +262,10 @@ function DisplayList(items, wrapper, rows_per_page, page) {
       item_element.classList.add('col-lg-4', 'col-6', 'mb-4');
       item_element.innerHTML = ` 
 <div class="card h-100">
-<div   class="bg-image hover-zoom ripple" data-mdb-ripple-color="light">
+<div class="bg-image hover-zoom ripple" data-mdb-ripple-color="light">
 ​<img class="img-fluid" loading="lazy" height="400" width="400"  src="${item.imageswebp.medium}"       alt="${item.producto}">
-<a arial-label="${item.producto}" href="https://nutramerican.com/producto/${item.ruta}">
-<div class="mask">
+<a arial-label="${item.producto}"  data-info="${item.codigo}"  >
+<div   class="mask">
 <div class="d-flex justify-content-start align-items-end h-100">
 ${(() => {
           if (item.descuento > 0) {
@@ -327,7 +336,7 @@ Comprar
 <div class="flip-card-front" >
 <div class="card card-body c">
 <div class="media d-block d-md-flex">
-<a arial-label="${item.producto}" class="ripple" href="https://nutramerican.com/producto/${item.ruta}">
+<a arial-label="${item.producto}" class="ripple" >
 ​<picture>
 <source alt="${item.producto}" srcset="${item.imageswebp.medium}" type="image/webp" >
 <img class="d-flex  mb-md-0 mb-3 img-list"  src="${item.images.medium}"      alt="${item.producto}">
