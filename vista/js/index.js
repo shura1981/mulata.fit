@@ -25,7 +25,7 @@ const loadProducts = async () => {
   }
 }
 // loadProducts();
-
+const timeClose=300;
 const lazyLoad = () => {
   const options = {
     threshold: 0,
@@ -193,22 +193,191 @@ const post = {
 }
 function abrirGluteos() {
   const url = host + "instagram/" + post.gluteosAcero + "?v=" + version;
-  console.log(url);
+  const urlBuy = dominio + "services/gluteos24kl";
   Swal.fire({
     html: `<iframe   frameborder="0" style=" height:80vh;width:100%"   src=${url}></iframe>`,
     showCloseButton: false,
     showCancelButton: true,
     focusConfirm: false,
     confirmButtonText:
-      '<i class="fa fa-thumbs-up"></i> Comprar plan',
+      `<i class="fa fa-thumbs-up"></i> Comprar plan `,
     confirmButtonAriaLabel: 'Comprar plan glúteos de acero',
     cancelButtonText:
       '<i class="fas fa-times"></i> Cerrar',
     cancelButtonAriaLabel: 'cancelar'
+  }).then((result) => {
+    /* Read more about isConfirmed, isDenied below */
+    if (result.isConfirmed) {
+      // Swal.fire('Saved!', '', 'success')
+      const h = setTimeout(() => {
+        clearTimeout(h)
+        //  window.open(urlBuy);
+        // window.open(mensaje, '_blank');
+        location.href = urlBuy;
+      }, timeClose);
+    }
+    // else if (result.isDenied) {
+    //   Swal.fire('Changes are not saved', '', 'info')
+    // }
   })
-
-
 }
+function abrirEntrenamiento() {
+  const url = dominio + "services/plan-entrenamiento";
+  const urlImg = host + "img/carousels/mockup1.webp";
+  console.log(url);
+  Swal.fire({
+    html: `
+    <div class="container py-3 modal-servicio">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <div class="ratio ratio1x1">
+                <img src="${urlImg}" class="ratio_img"
+                    alt="bipro desafío box">
+            </div>
+        </div>
+        <div class="col-12 my-3">
+            <h2 >💢ENTRENAMIENTOS PERSONALIZADOS POR ZOOM</h2>
+            <ul class="list-group list-group-light list-group-small">
+            <li class="list-group-item"> <strong>Valor: </strong>200 USD</li>
+            <li class="list-group-item"><strong>Días: </strong> 3 veces por semana</li>
+            <li class="list-group-item"><strong>El plan incluye: </strong> Rutina para toda la semana,trabajo de cuerpo completo, cardios y</li>
+               </ul>
+        </div>
+    </div>
+</div>
+    `,
+    showCloseButton: false,
+    showCancelButton: true,
+    focusConfirm: false,
+    confirmButtonText:
+      `  <i class="fa fa-thumbs-up"></i> Comprar plan `,
+    confirmButtonAriaLabel: 'Comprar plan glúteos de acero',
+    cancelButtonText:
+      '<i class="fas fa-times"></i> Cerrar',
+    cancelButtonAriaLabel: 'cancelar'
+  }).then((result) => {
+    /* Read more about isConfirmed, isDenied below */
+    if (result.isConfirmed) {
+      // Swal.fire('Saved!', '', 'success')
+      // window.open(mensaje, '_blank');
+
+      const h = setTimeout(() => {
+        clearTimeout(h)
+        // window.open(url);
+        location.href = url;
+      }, timeClose);
+
+    }
+    // else if (result.isDenied) {
+    //   Swal.fire('Changes are not saved', '', 'info')
+    // }
+  })
+}
+function abrirPlanNutricional() {
+  const url = dominio + "services/plan-nutricional";
+  const urlImg = host + "img/carousels/mockup1.webp";
+  console.log(url);
+  Swal.fire({
+    html: `
+    <div class="container py-3 modal-servicio">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <div class="ratio ratio1x1">
+                <img src="${urlImg}" class="ratio_img"
+                    alt="bipro desafío box">
+            </div>
+        </div>
+        <div class="col-12 my-3">
+            <h2 >💢ENTRENAMIENTOS PERSONALIZADOS POR ZOOM</h2>
+            <ul class="list-group list-group-light list-group-small">
+            <li class="list-group-item"> <strong>Valor: </strong>200 USD</li>
+            <li class="list-group-item"><strong>Días: </strong> 3 veces por semana</li>
+            <li class="list-group-item"><strong>El plan incluye: </strong> Rutina para toda la semana,trabajo de cuerpo completo, cardios y</li>
+               </ul>
+        </div>
+    </div>
+</div>
+    `,
+    showCloseButton: false,
+    showCancelButton: true,
+    focusConfirm: false,
+    confirmButtonText:
+      `  <i class="fa fa-thumbs-up"></i> Comprar plan `,
+    confirmButtonAriaLabel: 'Comprar plan glúteos de acero',
+    cancelButtonText:
+      '<i class="fas fa-times"></i> Cerrar',
+    cancelButtonAriaLabel: 'cancelar'
+  }).then((result) => {
+    /* Read more about isConfirmed, isDenied below */
+    if (result.isConfirmed) {
+      // Swal.fire('Saved!', '', 'success')
+      // window.open(mensaje, '_blank');
+
+      const h = setTimeout(() => {
+        clearTimeout(h)
+        // window.open(url);
+        location.href = url;
+      }, timeClose);
+
+    }
+    // else if (result.isDenied) {
+    //   Swal.fire('Changes are not saved', '', 'info')
+    // }
+  })
+}
+function abrirEntrenamiento2() {
+  const url = dominio + "services/plan-entrenamiento-promo";
+  const urlImg = host + "img/carousels/mockup1.webp";
+  console.log(url);
+  Swal.fire({
+    html: `
+    <div class="container py-3 modal-servicio">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <div class="ratio ratio1x1">
+                <img src="${urlImg}" class="ratio_img"
+                    alt="bipro desafío box">
+            </div>
+        </div>
+        <div class="col-12 my-3">
+            <h2 >💢ENTRENAMIENTOS PERSONALIZADOS POR ZOOM</h2>
+            <ul class="list-group list-group-light list-group-small">
+            <li class="list-group-item"> <strong>Valor: </strong>200 USD</li>
+            <li class="list-group-item"><strong>Días: </strong> 3 veces por semana</li>
+            <li class="list-group-item"><strong>El plan incluye: </strong> Rutina para toda la semana,trabajo de cuerpo completo, cardios y</li>
+               </ul>
+        </div>
+    </div>
+</div>
+    `,
+    showCloseButton: false,
+    showCancelButton: true,
+    focusConfirm: false,
+    confirmButtonText:
+      `  <i class="fa fa-thumbs-up"></i> Comprar plan `,
+    confirmButtonAriaLabel: 'Comprar plan glúteos de acero',
+    cancelButtonText:
+      '<i class="fas fa-times"></i> Cerrar',
+    cancelButtonAriaLabel: 'cancelar'
+  }).then((result) => {
+    /* Read more about isConfirmed, isDenied below */
+    if (result.isConfirmed) {
+      // Swal.fire('Saved!', '', 'success')
+      // window.open(mensaje, '_blank');
+
+      const h = setTimeout(() => {
+        clearTimeout(h)
+        // window.open(url);
+        location.href = url;
+      }, timeClose);
+
+    }
+    // else if (result.isDenied) {
+    //   Swal.fire('Changes are not saved', '', 'info')
+    // }
+  })
+}
+
 function showModalPopUp() {
   popUpObj = window.open("http://localhost/mulata.fit/vista/js/post1.html",
     "ModalPopUp",
@@ -290,6 +459,8 @@ function openInfo() {
 
 }
 document.getElementById("btngluteos").addEventListener("click", abrirGluteos);
+document.getElementById("asesoria1").addEventListener("click", abrirPlanNutricional);
+document.getElementById("btnEntrenamiento").addEventListener("click", abrirEntrenamiento);
 const btnsGrid = document.querySelectorAll("[data-post]");
 btnsGrid.forEach(btn => btn.addEventListener("click", openPost))
 const btnMulata = document.getElementById("sobremulata");

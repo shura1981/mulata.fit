@@ -1,22 +1,22 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 <meta http-equiv="x-ua-compatible" content="ie=edge" />
-<link rel="apple-touch-icon" sizes="57x57" href="https://mulata.fit/vista/icons/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="https://mulata.fit/vista/icons/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="https://mulata.fit/vista/icons/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="https://mulata.fit/vista/icons/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="https://mulata.fit/vista/icons/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="https://mulata.fit/vista/icons/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="https://mulata.fit/vista/icons/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="https://mulata.fit/vista/icons/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="https://mulata.fit/vista/icons/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="https://mulata.fit/vista/icons/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://mulata.fit/vista/icons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="https://mulata.fit/vista/icons/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="https://mulata.fit/vista/icons/favicon-16x16.png">
-<link rel="manifest" href="https://mulata.fit/vista/manifest.webmanifest">
+<link rel="apple-touch-icon" sizes="57x57" href="<?php echo URL_VISTA?>icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="<?php echo URL_VISTA?>icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="<?php echo URL_VISTA?>icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="<?php echo URL_VISTA?>icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="<?php echo URL_VISTA?>icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="<?php echo URL_VISTA?>icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="<?php echo URL_VISTA?>icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="<?php echo URL_VISTA?>icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="<?php echo URL_VISTA?>icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="<?php echo URL_VISTA?>icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="<?php echo URL_VISTA?>icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="<?php echo URL_VISTA?>icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="<?php echo URL_VISTA?>icons/favicon-16x16.png">
+<link rel="manifest" href="<?php echo URL_VISTA?>manifest.webmanifest">
 <meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="https://mulata.fit/vista/icons/ms-icon-144x144.png">
+<meta name="msapplication-TileImage" content="<?php echo URL_VISTA?>icons/ms-icon-144x144.png">
 <meta name="theme-color" content="#e91e63">
 <!-- preloads -->
 <!-- <link rel="preload" href="/img/logonutramerican-svg.webp" as="image">
@@ -101,6 +101,5 @@ const dominio = <?= json_encode(URL_SERVER,JSON_HEX_QUOT | JSON_HEX_TAG | JSON_H
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-9DG64H7P7P');
 </script>

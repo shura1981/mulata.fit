@@ -151,7 +151,7 @@
                 </p>
                 <div class="d-grid d-md-block justify-content-center">
 
-                    <button type="button" class="btn bg-sucess btn-rounded mt-3">Ver Más</button>
+                    <button id="asesoria1" type="button" class="btn bg-sucess btn-rounded mt-3">Ver Más</button>
                 </div>
 
             </div>
@@ -171,7 +171,7 @@
                     físicas.
                 </p>
                 <div class="d-grid d-md-block justify-content-center">
-                    <button type="button" class="btn bg-success-secondary btn-rounded mt-3">Ver Más</button>
+                    <button id="btnEntrenamiento"  type="button" class="btn bg-success-secondary btn-rounded mt-3">Ver Más</button>
 
                 </div>
 
@@ -199,7 +199,7 @@
                 </p>
                 <div class="d-grid d-md-block justify-content-center">
 
-                    <button type="button" class="btn bg-sucess btn-rounded mt-3">Ver Más</button>
+                    <a href="<?php echo URL_SERVER?>services/asesoria" role="button" class="btn bg-sucess btn-rounded mt-3">Ver Más</a>
                 </div>
             </div>
 

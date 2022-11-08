@@ -1529,3 +1529,14 @@ canvas {
   background-color: #e53d7680;
   border-color: #262626;
 }
+
+.modal-servicio {
+   text-align: left;
+}
+
+.modal-servicio h1, .modal-servicio h2, .modal-servicio p{
+  color: var(--footer) !important;
+}
+.modal-servicio li{
+ margin-bottom: 0 !important;
+}

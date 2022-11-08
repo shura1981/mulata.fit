@@ -2,7 +2,7 @@
 class vistasModelos{
 protected function obtener_vistas_modelo($vistas)
 {
-$rutas=["blog","contact","post","home","products","about","details", "services", "pricing", "details", "staff", "demo-gym-staff-detail"];   
+$rutas=["blog", "post","home","products", "services", "template"];   
 if(in_array($vistas,$rutas)){
 $url=   "vista/".$vistas.".php";
 if (is_file($url)) {

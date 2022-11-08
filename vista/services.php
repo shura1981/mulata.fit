@@ -1,235 +1,51 @@
+<?php
+$url= $_SERVER["REQUEST_URI"];
+$url= explode("/", $url);
+$ruta= $url[(count($url)-1)];
+// require 'server/connection/connection.php';
+// $select=$mysqli->query("SELECT * FROM tb_blog WHERE path='$ruta'");
+// $meta = $select->fetch_assoc();
+echo $ruta;
+?>
 <!DOCTYPE html>
-<html class="sticky-header-reveal">
-	<head>
+<html lang="en">
 
-		<!-- Basic -->
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 
-		<title>Demo Gym | Porto - Multipurpose Website Template</title>	
+<body>
 
-		<meta name="keywords" content="WebSite Template" />
-		<meta name="description" content="Porto - Multipurpose Website Template">
-		<meta name="author" content="okler.net">
+    <pre>
+Este  WhatsApp es único y exclusivo para información de asesorías.
+🆕plan perzonalizado workout by mulata 
+🆕plan glúteos 24 killates 4 semanas
+🆕una vez decidas ser parte del team.
+iniciamos con el pago y nos envías capture del mismo.
 
-		<!-- Favicon -->
-		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-		<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+ 
+☑️Solo se reciben giros internacionales por PayPal  de lo contrario consúltame antes de realizar tu giro GRACIAS 
 
-		<!-- Mobile Metas -->
-		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+1️⃣cuenta  Bancolombia
+  (Cristian Andrés Doria Vargas) 
+ahorro 91217217534
+2️⃣paypal :sunnydoriakyk@gmail.com
+3️⃣nequi 3127899708 
+4️⃣daviplata 3225210073 
+4️⃣Datos de consignación:
+Efecty-wéstern union 
+nombre : Sunny
+Apellidos Doria Vargas 
+Cc :55245715 
+Barranquilla -colombia
 
-		<!-- Web Fonts  -->
-		<link id="googleFonts" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet" type="text/css">
 
-		<!-- Vendor CSS -->
-		<link rel="stylesheet" href="<?php echo URL_VISTA?>vendor/bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" href="<?php echo URL_VISTA?>vendor/fontawesome-free/css/all.min.css">
-		<link rel="stylesheet" href="<?php echo URL_VISTA?>vendor/animate/animate.compat.css">
-		<link rel="stylesheet" href="<?php echo URL_VISTA?>vendor/simple-line-icons/css/simple-line-icons.min.css">
-		<link rel="stylesheet" href="<?php echo URL_VISTA?>vendor/owl.carousel/assets/owl.carousel.min.css">
-		<link rel="stylesheet" href="<?php echo URL_VISTA?>vendor/owl.carousel/assets/owl.theme.default.min.css">
-		<link rel="stylesheet" href="<?php echo URL_VISTA?>vendor/magnific-popup/magnific-popup.min.css">
+</pre>
 
-		<!-- Theme CSS -->
-		<link rel="stylesheet" href="<?php echo URL_VISTA?>css/theme.css">
-		<link rel="stylesheet" href="<?php echo URL_VISTA?>css/theme-elements.css">
-		<link rel="stylesheet" href="<?php echo URL_VISTA?>css/theme-blog.css">
-		<link rel="stylesheet" href="<?php echo URL_VISTA?>css/theme-shop.css">
 
-		<!-- Revolution Slider CSS -->
-		<link rel="stylesheet" href="<?php echo URL_VISTA?>vendor/rs-plugin/css/settings.css">
-		<link rel="stylesheet" href="<?php echo URL_VISTA?>vendor/rs-plugin/css/layers.css">
-		<link rel="stylesheet" href="<?php echo URL_VISTA?>vendor/rs-plugin/css/navigation.css">
+</body>
 
-		<!-- Demo CSS -->
-		<link rel="stylesheet" href="<?php echo URL_VISTA?>css/demos/demo-gym.css">
-
-		<!-- Skin CSS -->
-		<link id="skinCSS" rel="stylesheet" href="<?php echo URL_VISTA?>css/skins/skin-gym.css">
-
-		<!-- Theme Custom CSS -->
-		<link rel="stylesheet" href="<?php echo URL_VISTA?>css/custom.css">
-
-		<!-- Head Libs -->
-		<script src="<?php echo URL_VISTA?>vendor/modernizr/modernizr.min.js"></script>
-
-	</head>
-	<body>
-
-		<div class="body">
-			<header id="header" class="header-floating-bar header-floating-bar-static-sticky" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'reveal', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyStartAt': 0, 'stickySetTop': '0px', 'stickyChangeLogo': false}">
-				<div class="header-body bg-color-dark box-shadow-none">
-					<div class="header-container header-container-height-sm container">
-						<div class="header-row">
-							<div class="header-column">
-								<div class="header-row">
-									<div class="header-logo">
-										<a href="/">
-											<img alt="Porto Gym" width="143" height="25" src="<?php echo URL_VISTA?>img/demos/gym/logo.png">
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="header-column justify-content-end me-lg-4">
-								<div class="header-row">
-									<div class="header-nav header-nav-links header-nav-dropdowns-dark header-nav-force-light-text header-nav-force-light-text-active-skin-color order-2 order-lg-1">
-										<div class="header-nav-main header-nav-main-mobile-dark header-nav-main-dropdown-no-borders header-nav-main-clone-items header-nav-main-slide header-nav-main-square header-nav-main-effect-2 header-nav-main-sub-effect-1">
-										<?php include "./vista/partials/nav.php" ?>
-										</div>
-										<a class="btn btn-primary btn-join-now text-uppercase custom-font-weight-medium d-none d-lg-flex" href="demo-gym-contact-us.html">Join Now</a>
-										<button class="btn header-btn-collapse-nav" data-bs-toggle="collapse" data-bs-target=".header-nav-main nav">
-											<i class="fas fa-bars"></i>
-										</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</header>
-
-			<div role="main" class="main">
-
-				<section class="section section-no-border section-light custom-padding-top-1 mb-0">
-					<div class="container">
-						<div class="row mt-4">
-							<div class="col">
-								<h1 class="font-weight-bold text-color-primary mb-0">Classes</h1>
-								<h4 class="font-weight-bold text-color-quaternary">One is for you</h4>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet laoreet lorem, a imperdiet sapien tincidunt at. Vivamus sed libero ut diam feugiat sagittis sit amet in justo.</p>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<section class="section section-quaternary section-center section-no-border m-0">
-					<div class="container">
-						<div class="row justify-content-center mb-4 mb-md-0 mb-lg-5">
-							<div class="col-md-8 col-lg-4">
-								<span class="thumb-info custom-thumb-info-2 thumb-info-hide-wrapper-bg">
-									<span class="thumb-info-wrapper m-0">
-										<img src="<?php echo URL_VISTA?>img/demos/gym/classes/classes-1.jpg" class="img-fluid" alt="">
-									</span>
-									<span class="thumb-info-caption bg-color-light text-center p-5">
-										<h4 class="font-weight-bold text-color-quaternary mb-3">Group Fitness</h4>
-										<p class="text-color-dark p-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet laoreet lorem a imperdiet sapien.</p>
-										<a class="btn btn-primary custom-btn-style-1 text-uppercase text-color-light custom-font-weight-medium" href="demo-gym-classes-detail.html" title="Learn More">Learn More</a>
-									</span>
-								</span>
-							</div>
-							<div class="col-md-8 col-lg-4 custom-sm-margin-2">
-								<span class="thumb-info custom-thumb-info-2 thumb-info-hide-wrapper-bg">
-									<span class="thumb-info-wrapper m-0">
-										<img src="<?php echo URL_VISTA?>img/demos/gym/classes/classes-2.jpg" class="img-fluid" alt="">
-									</span>
-									<span class="thumb-info-caption bg-color-light text-center p-5">
-										<h4 class="font-weight-bold text-color-quaternary mb-3">Yoga</h4>
-										<p class="text-color-dark p-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet laoreet lorem a imperdiet sapien.</p>
-										<a class="btn btn-primary custom-btn-style-1 text-uppercase text-color-light custom-font-weight-medium" href="demo-gym-classes-detail.html" title="Learn More">Learn More</a>
-									</span>
-								</span>
-							</div>
-							<div class="col-md-8 col-lg-4 custom-sm-margin-2">
-								<span class="thumb-info custom-thumb-info-2 thumb-info-hide-wrapper-bg">
-									<span class="thumb-info-wrapper m-0">
-										<img src="<?php echo URL_VISTA?>img/demos/gym/classes/classes-3.jpg" class="img-fluid" alt="">
-									</span>
-									<span class="thumb-info-caption bg-color-light text-center p-5">
-										<h4 class="font-weight-bold text-color-quaternary mb-3">Functional</h4>
-										<p class="text-color-dark p-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet laoreet lorem a imperdiet sapien.</p>
-										<a class="btn btn-primary custom-btn-style-1 text-uppercase text-color-light custom-font-weight-medium" href="demo-gym-classes-detail.html" title="Learn More">Learn More</a>
-									</span>
-								</span>
-							</div>
-						</div>
-						<div class="row justify-content-center">
-							<div class="col-md-8 col-lg-4 custom-sm-margin-2 custom-xs-margin-1" data-appear-animation-delay="600">
-								<span class="thumb-info custom-thumb-info-2 thumb-info-hide-wrapper-bg">
-									<span class="thumb-info-wrapper m-0">
-										<img src="<?php echo URL_VISTA?>img/demos/gym/classes/classes-4.jpg" class="img-fluid" alt="">
-									</span>
-									<span class="thumb-info-caption bg-color-light text-center p-5">
-										<h4 class="font-weight-bold text-color-quaternary mb-3">Spin Class</h4>
-										<p class="text-color-dark p-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet laoreet lorem a imperdiet sapien.</p>
-										<a class="btn btn-primary custom-btn-style-1 text-uppercase text-color-light custom-font-weight-medium" href="demo-gym-classes-detail.html" title="Learn More">Learn More</a>
-									</span>
-								</span>
-							</div>
-							<div class="col-md-8 col-lg-4 custom-sm-margin-2">
-								<span class="thumb-info custom-thumb-info-2 thumb-info-hide-wrapper-bg">
-									<span class="thumb-info-wrapper m-0">
-										<img src="<?php echo URL_VISTA?>img/demos/gym/classes/classes-5.jpg" class="img-fluid" alt="">
-									</span>
-									<span class="thumb-info-caption bg-color-light text-center p-5">
-										<h4 class="font-weight-bold text-color-quaternary mb-3">Zumba</h4>
-										<p class="text-color-dark p-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet laoreet lorem a imperdiet sapien.</p>
-										<a class="btn btn-primary custom-btn-style-1 text-uppercase text-color-light custom-font-weight-medium" href="demo-gym-classes-detail.html" title="Learn More">Learn More</a>
-									</span>
-								</span>
-							</div>
-							<div class="col-md-8 col-lg-4 custom-sm-margin-2">
-								<span class="thumb-info custom-thumb-info-2 thumb-info-hide-wrapper-bg">
-									<span class="thumb-info-wrapper m-0">
-										<img src="<?php echo URL_VISTA?>img/demos/gym/classes/classes-6.jpg" class="img-fluid" alt="">
-									</span>
-									<span class="thumb-info-caption bg-color-light text-center p-5">
-										<h4 class="font-weight-bold text-color-quaternary mb-3">Conditioning</h4>
-										<p class="text-color-dark p-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet laoreet lorem a imperdiet sapien.</p>
-										<a class="btn btn-primary custom-btn-style-1 text-uppercase text-color-light custom-font-weight-medium" href="demo-gym-classes-detail.html" title="Learn More">Learn More</a>
-									</span>
-								</span>
-							</div>
-						</div>
-					</div>
-				</section>
-
-			</div>
-
-			<footer id="footer" class="bg-color-quaternary">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12 text-center">
-							<ul class="social-icons custom-social-icons">
-								<li class="social-icons-instagram"><a href="http://www.instagram.com/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
-								<li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-								<li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
-								<li class="social-icons-googleplus"><a href="http://www.google.com/" target="_blank" title="Google Plus"><i class="fab fa-google-plus-g"></i></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="row mt-2">
-						<div class="col-lg-12 text-center">
-							<p>2022 © Porto <strong class="text-color-light font-weight-normal">The Gym</strong> Copyright All Rights Reserved.</p>
-						</div>
-					</div>
-				</div>
-			</footer>
-
-		</div>
-
-		<!-- Vendor -->
-		<script src="<?php echo URL_VISTA?>vendor/plugins/js/plugins.min.js"></script>
-		<script src="<?php echo URL_VISTA?>vendor/instafeed/instafeed.min.js"></script>
-
-		<!-- Theme Base, Components and Settings -->
-		<script src="<?php echo URL_VISTA?>js/theme.js"></script>
-
-		<!-- Revolution Slider Scripts -->
-		<script src="<?php echo URL_VISTA?>vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
-		<script src="<?php echo URL_VISTA?>vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-
-		<!-- Current Page Vendor and Views -->
-		<script src="<?php echo URL_VISTA?>js/views/view.contact.js"></script>
-
-		<!-- Demo -->
-		<script src="<?php echo URL_VISTA?>js/demos/demo-gym.js"></script>
-
-		<!-- Theme Custom -->
-		<script src="<?php echo URL_VISTA?>js/custom.js"></script>
-
-		<!-- Theme Initialization Files -->
-		<script src="<?php echo URL_VISTA?>js/theme.init.js"></script>
-
-	</body>
 </html>

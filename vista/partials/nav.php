@@ -12,11 +12,11 @@
                     <path d="M1.57 1.59l12.76 12.77L27.1 1.59" stroke-width="2" fill="none" fill-rule="evenodd"></path>
                 </svg>
                 <ul class="submenu">
-                    <li><a href="<?php echo URL_SERVER?>products?category=perdidapeso">Control de peso </a></li>
-                    <li> <a href="<?php echo URL_SERVER?>products?category=modulosproteicos">Ganar masa muscular </a>
+                    <li><a class="d-block " style="text-align:left" href="<?php echo URL_SERVER?>products?category=perdidapeso">Control de peso </a></li>
+                    <li> <a class="d-block " style="text-align:left" href="<?php echo URL_SERVER?>products?category=modulosproteicos">Ganar masa muscular </a>
                     </li>
-                    <li> <a href="<?php echo URL_SERVER?>products?category=hipercaloricos">Hipercalóricos</a></li>
-                    <li><a href="<?php echo URL_SERVER?>products?category=energiarecuperacion">Aminoácidos </a></li>
+                    <li> <a class="d-block " style="text-align:left" href="<?php echo URL_SERVER?>products?category=hipercaloricos">Hipercalóricos</a></li>
+                    <li><a class="d-block " style="text-align:left" href="<?php echo URL_SERVER?>products?category=energiarecuperacion">Aminoácidos </a></li>
                 </ul>
 
 
