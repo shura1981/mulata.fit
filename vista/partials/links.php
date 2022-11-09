@@ -27,7 +27,6 @@
 <link rel="preload" media="(min-width: 601px)" href="/video/desafio3.mp4" as="video"> -->
 <link href="<?php echo URL_VISTA?>fonts/Lato/stylesheet.css" rel="preload" as="style">
 <link rel="preload" as="style" href="<?php echo URL_VISTA?>css/mdb.min.css" />
-<link rel="preload" as="style" href="<?php echo URL_VISTA?>css/mdb.min.css" />
 <link rel="preload" as="style" href="<?php echo URL_VISTA?>css/swiper-bundle.min.css" />
 <link rel="preload" as="style" href="<?php echo URL_VISTA?>css/all.min.css" />
 <link href="<?php echo URL_VISTA?>js/mdb.min.js" rel="preload" as="script">

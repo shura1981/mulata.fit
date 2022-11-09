@@ -1,0 +1,102 @@
+body {
+  background-color: var(--mulata-color-bg);
+  font-family: var(--font-family);
+  font-weight: normal;
+  font-style: normal;
+}
+
+.pay {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  width: 100%;
+  overflow: hidden;
+}
+
+.description-pay {
+  background: url(https://mulata.fit/vista/img/carousels/resources.webp);
+  background-size: cover;
+  color: #fff;
+  padding: 3rem 1.5rem;
+  position: relative;
+}
+
+.description-pay::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--footer);
+  opacity: .9;
+}
+
+.relative {
+  position: relative;
+}
+
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: 0.5rem 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #ffffff47;
+}
+
+.bg-sucess,
+.bg-sucess:hover {
+  color: white;
+  background: var(--colorPrimary) !important;
+}
+
+.form-outline .form-control:focus ~ .form-notch .form-notch-leading {
+  border-top: 0.125rem solid var(--colorPrimary);
+  border-bottom: 0.125rem solid var(--colorPrimary);
+  border-left: 0.125rem solid var(--colorPrimary);
+}
+
+.form-outline .form-control:focus ~ .form-notch .form-notch-trailing {
+  border-top: 0.125rem solid var(--colorPrimary);
+  border-bottom: 0.125rem solid var(--colorPrimary);
+  border-right: 0.125rem solid var(--colorPrimary);
+}
+
+.form-outline .form-control:focus ~ .form-notch .form-notch-middle {
+  border-bottom: 0.125rem solid;
+  border-color: var(--colorPrimary);
+}
+
+.form-outline .form-control:focus ~ .form-label {
+  color: var(--colorPrimary);
+}
+
+/* scroll */
+@media screen and (min-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1) {
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    min-height: 200px;
+    background: var(--degradePrimary);
+  }
+}
+
+.file-upload {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background: #ececec;
+  box-shadow: 1px 1px 5px #adadad;
+}
+
+.color-primary {
+  color: var(--colorPrimary);
+}
