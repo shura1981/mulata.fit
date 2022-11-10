@@ -444,11 +444,12 @@ mkdir($path, 0777, true);
 }
 
 if (isset($_FILES['file'])) {
-
-    
-$originalName = $_FILES['file']['name'];
+$countfiles = count($_FILES['file']['name']);
+// Looping all files
+for($i=0;$i<$countfiles;$i++){
+$originalName = $_FILES['file']['name'][$i];
 $ext = '.'.pathinfo($originalName, PATHINFO_EXTENSION);
-$generatedName = md5($_FILES['file']['tmp_name']).$ext;
+$generatedName = md5($_FILES['file']['tmp_name'][$i]).$ext;
 $filePath = $path.$generatedName;
 array_push($ruta,$tempPath.$generatedName);
 if (!is_writable($path)) {
@@ -458,26 +459,20 @@ echo json_encode(array(
 ));
 exit;
 }
+move_uploaded_file($_FILES['file']['tmp_name'][$i], $filePath);
+}
 
-if (move_uploaded_file($_FILES['file']['tmp_name'], $filePath)) {
-//Here save file name $generatedName into database.
 echo json_encode(array(
 'status'        => true,
-'originalName'  => $originalName,
-'generatedName' => $generatedName,
 'name'          =>$name,
 'lastname'      =>$lastname,
 'ruta'          =>$ruta
 ));
 
 }
-}
-else {
-echo json_encode(
-array('status' => false, 'msg' => 'No file uploaded.')
-);
-exit;
-}
+
+else { echo json_encode(array('status' => false, 'msg' => 'No file uploaded.'));}
+
 });
 //endregion
 //region Api Intranet Elite Nutrition
