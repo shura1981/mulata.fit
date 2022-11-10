@@ -19,19 +19,19 @@ $method = $_SERVER['REQUEST_METHOD'];
 if($method == "OPTIONS") {
 die();
 }
-// $dominio="http://localhost/api_eliteN/uploads/";
-$dominio="https://www.elitenutritiongroup.com/api_eliteN/uploads/";
+//$dominio="https://mulata.fit/uploads/";
+$dominio="http://localhost/mulata.fit/uploads/";
 $app = new \Slim\Slim();
 $app->response()->header('Content-Type', 'application/json;charset=UTF-8'); 
 //region get json
 
 
-$app->get('/params', function ()  use($app){
+$app->get('/params', function ()  use($app,$dominio){
 try{
 $paramname = $app->request()->params('name');
 $paramedad = $app->request()->params('edad');
 if($paramname && $paramedad){
-echo json_encode("Holaaa ". $paramname . ", su edad es : ". $paramedad . "años" . URL_SERVER);
+echo json_encode("Holaaa ". $paramname . ", su edad es : ". $paramedad . "años" . ", dominio: ".$dominio);
 } else echo json_encode("hola desconocido");
 }catch(Exception $exception){
 echo json_encode("Ocurrió un error:" . $exception);
@@ -428,17 +428,29 @@ echo json_encode($result);
 });
 //endregion
 //region form-data, subir archivos al servidor
-$app->post('/upload-file',function() use($app){
-$path = $_SERVER['DOCUMENT_ROOT'].'/lipoblue/services/uploads/';   
+$app->post('/upload-file',function() use($app,$dominio){
 $request = $app->request();
 $name = $request->post('name');
 $lastname = $request->post('lastname');
+$id_vendedor = $request->post('id');
+$ruta=array();
+$hoy = date("Y-m-d");  
+$path=$_SERVER['DOCUMENT_ROOT'].'/mulata.fit/uploads/'.$hoy.'/'.$id_vendedor.'/';
+$tempPath= $dominio.$hoy.'/'.$id_vendedor.'/';
+//Check if the directory already exists.
+if(!is_dir($path)){
+//Directory does not exist, so lets create it.
+mkdir($path, 0777, true);
+}
+
 if (isset($_FILES['file'])) {
+
+    
 $originalName = $_FILES['file']['name'];
 $ext = '.'.pathinfo($originalName, PATHINFO_EXTENSION);
 $generatedName = md5($_FILES['file']['tmp_name']).$ext;
 $filePath = $path.$generatedName;
-
+array_push($ruta,$tempPath.$generatedName);
 if (!is_writable($path)) {
 echo json_encode(array(
 'status' => false,
@@ -449,14 +461,15 @@ exit;
 
 if (move_uploaded_file($_FILES['file']['tmp_name'], $filePath)) {
 //Here save file name $generatedName into database.
-
 echo json_encode(array(
 'status'        => true,
 'originalName'  => $originalName,
 'generatedName' => $generatedName,
 'name'          =>$name,
-'lastname'      =>$lastname
+'lastname'      =>$lastname,
+'ruta'          =>$ruta
 ));
+
 }
 }
 else {
@@ -488,6 +501,3 @@ $app->run();
 // SELECT DATE_FORMAT(fecha, '%Y %m') AS AÑO_MES FROM `tb_maestro_planilla` WHERE `mensajero`->'$.id'=52698507
 // GROUP BY AÑO_MES
 // clientesxvendedorall clientes por vendedor
-
-
-
