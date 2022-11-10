@@ -1,17 +1,20 @@
 'use strict';
 
 class Service {
-    constructor() {
+    constructor(url) {
+        this.url = url;
         this.data = new FormData();
         this.inputElement = document.querySelector('input[type=file]');
+        this.button = document.getElementById("custom-validation-button");
         this.inputElement.addEventListener("change", this.handleFiles.bind(this), false);
+        this.button.addEventListener("click", this.sendFiles.bind(this));
         this.isValid = false;
     }
 
     request() {
         // msgSending();
         let request = new XMLHttpRequest();
-        request.open('POST', '/form');
+        request.open('POST', this.url);
         // upload progress event
         request.upload.addEventListener('progress', function (e) {
             let percent_complete = (e.loaded / e.total) * 100;
@@ -23,6 +26,7 @@ class Service {
         request.addEventListener('load', function (e) {
             // HTTP status message
             // msgSendingReset();
+            console.log(request.response);
             const res = JSON.parse(request.response);
             if (request.status !== 200 && request.status !== 201) {
                 console.log(`ocurrió un error: ${request.status}`, res, (typeof request.status));
@@ -44,7 +48,7 @@ class Service {
     }
 
     handleFiles() {
-        var fileList = this.inputElement.files;
+        const fileList = this.inputElement.files;
         this.isValid = (fileList.length > 0);
         this.showError(this.isValid)
         this.assingFiles(this.inputElement.id, fileList);
@@ -89,15 +93,20 @@ class Service {
         // });
         //#endregion
         let isFileValidate = true;
-        this.inputElements.forEach(input => {
-            isFileValidate = (input.files.length > 0);
-            this.showError(isFileValidate, input.id)
-            input.files.forEach(file => data.append('file', file));
+        this.inputElement.files.forEach(file => {
+            console.log(file);
+            // isFileValidate = (input.files.length > 0);
+            // this.showError(isFileValidate, input.id)
+            this.data.append('file[]', file);
         });
-        if (this.validateJson() && isFileValidate) {
-            data.append('form', JSON.stringify(form));
-            data.append('asunto', 'prueba');
-            this.request(data);
+        // this.validateJson() && 
+        if (isFileValidate) {
+            this.data.append('form', JSON.stringify(form));
+            this.data.append('name', 'Steven');
+            this.data.append('lastname', 'Realpe Parra' );
+            this.data.append('id', '6394880' );
+            
+            this.request();
             // console.log(JSON.stringify(form));
         } else this.showErrorFetch("Datos incompletos");
     }
@@ -121,4 +130,6 @@ class Service {
 
 }
 
-new Service();
+new Service('http://localhost/mulata.fit/server/rest/webservice.php/registrocomprobante');
+
+
