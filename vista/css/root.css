@@ -1,6 +1,7 @@
 :root {
     --colorPrimary: #e91e63;
     --colorSecondary: #07ebfc;
+    --colorAlternative: #2d8cff;
     --degradePrimary: linear-gradient(18deg, #03a9f4 0%, #e80a55 93% 45%);
     --degradePrimary2: linear-gradient(18deg, #e80a55 0%, #03a9f4 93% 45%);
     --degradePrimary3: linear-gradient(18deg, #03a9f4 0%, #0ab4e8 93% 45%);

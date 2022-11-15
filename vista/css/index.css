@@ -56,6 +56,9 @@ body {
 .text-success-secondary {
   color: var(--colorSecondary) !important;
 }
+.text-success-secondary-primary {
+  color: var(--colorAlternative) !important;
+}
 
 .bg-success-secondary,
 .bg-success-secondary:hover {
@@ -1539,4 +1542,10 @@ canvas {
 }
 .modal-servicio li{
  margin-bottom: 0 !important;
+}
+
+
+.bg-success-secondary-primary, .bg-success-secondary-primary:hover {
+  color: rgb(255, 255, 255);
+  background: #2d8cff  !important;
 }

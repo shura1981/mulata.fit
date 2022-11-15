@@ -222,8 +222,9 @@ function abrirGluteos() {
   })
 }
 function abrirEntrenamiento() {
-  const url = dominio + "services/plan-entrenamiento";
-  const urlImg = host + "img/carousels/mockup1.webp";
+  const url = dominio + "services/plan-entrenamiento-zoom";
+  const urlImgXl = host + "img/testimonial/servicio_entreno_zoom_xl.webp";
+  const urlImgsm = host + "img/testimonial/servicio_entreno_zoom_sm.webp";
   console.log(url);
   Swal.fire({
     html: `
@@ -231,16 +232,18 @@ function abrirEntrenamiento() {
     <div class="row justify-content-center">
         <div class="col-12">
             <div class="ratio ratio1x1">
-                <img src="${urlImg}" class="ratio_img"
-                    alt="bipro desafío box">
+            <picture>
+            <source media="(min-width: 600px)" srcset="${urlImgXl}" type="image/webp">
+            <img src="${urlImgsm}" class="ratio_img"  alt="Plan 3x7 mulata.fit">
+            </picture>
             </div>
         </div>
-        <div class="col-12 my-3">
-            <h2 >💢ENTRENAMIENTOS PERSONALIZADOS POR ZOOM</h2>
+        <div class="col-12 mt-3">
+            <h2 class="mb-3">💢 ENTRENAMIENTOS PERSONALIZADOS POR ZOOM</h2>
             <ul class="list-group list-group-light list-group-small">
             <li class="list-group-item"> <strong>Valor: </strong>200 USD</li>
             <li class="list-group-item"><strong>Días: </strong> 3 veces por semana</li>
-            <li class="list-group-item"><strong>El plan incluye: </strong> Rutina para toda la semana,trabajo de cuerpo completo, cardios y</li>
+            <li class="list-group-item"><strong>El plan incluye: </strong> Rutina para toda la semana,trabajo de cuerpo completo, cardios y recomendación nutricional. </li>
                </ul>
         </div>
     </div>
@@ -274,25 +277,31 @@ function abrirEntrenamiento() {
   })
 }
 function abrirPlanNutricional() {
-  const url = dominio + "services/plan-nutricional";
-  const urlImg = host + "img/carousels/mockup1.webp";
-  console.log(url);
+  const url = dominio + "services/plan-basico";
+  const urlImgXl = host + "img/testimonial/servicio3X7_xl.webp";
+  const urlImgsm = host + "img/testimonial/servicio3X7_sm.webp";
   Swal.fire({
     html: `
     <div class="container py-3 modal-servicio">
     <div class="row justify-content-center">
         <div class="col-12">
             <div class="ratio ratio1x1">
-                <img src="${urlImg}" class="ratio_img"
-                    alt="bipro desafío box">
+            <picture>
+            <source media="(min-width: 600px)" srcset="${urlImgXl}" type="image/webp">
+            <img src="${urlImgsm}" class="ratio_img"  alt="Plan 3x7 mulata.fit">
+            </picture>
             </div>
         </div>
-        <div class="col-12 my-3">
-            <h2 >💢ENTRENAMIENTOS PERSONALIZADOS POR ZOOM</h2>
+        <div class="col-12 mt-3">
+            <h2 class="mb-3">💢 ASESORÍAS Y RUTINAS PERSONALIZADAS</h2>
             <ul class="list-group list-group-light list-group-small">
-            <li class="list-group-item"> <strong>Valor: </strong>200 USD</li>
-            <li class="list-group-item"><strong>Días: </strong> 3 veces por semana</li>
-            <li class="list-group-item"><strong>El plan incluye: </strong> Rutina para toda la semana,trabajo de cuerpo completo, cardios y</li>
+            <li class="list-group-item"> <strong>Valor: </strong>75 USD</li>
+            <li class="list-group-item"><strong>Duración: </strong> 30 días.</li>
+            <li class="list-group-item"><strong>El plan incluye: </strong> Rutina para toda la semana,trabajo de cuerpo completo, cardios y recomendación nutricional. </li>
+            <li class="list-group-item">✅Guía de alimentación basada en objetivo, preferencia alimenticias y los requerimientos  calóricos y nutricionales  asociados a ti. </li>
+            <li class="list-group-item">✅Geguimientos con fotos medidas y pesos  manteniéndonos informada de resultado y sensaciones.  </li>
+            <li class="list-group-item">✅Guía de suplementación con evidencia científica.  </li>
+            <li class="list-group-item">✅Entrenamientos con videos explicativos SEGUN TU PLAN  (casa o gym) adaptados a tu horio y capacidades físicas.</li>
                </ul>
         </div>
     </div>
@@ -325,26 +334,32 @@ function abrirPlanNutricional() {
     // }
   })
 }
-function abrirEntrenamiento2() {
-  const url = dominio + "services/plan-entrenamiento-promo";
-  const urlImg = host + "img/carousels/mockup1.webp";
-  console.log(url);
+function abrirPlanPremiun() {
+  const url = dominio + "services/plan-premiun";
+  const urlImgXl = host + "img/testimonial/serviciopromo_xl.webp";
+  const urlImgsm = host + "img/testimonial/serviciopromo_sm.webp";
   Swal.fire({
     html: `
     <div class="container py-3 modal-servicio">
     <div class="row justify-content-center">
         <div class="col-12">
             <div class="ratio ratio1x1">
-                <img src="${urlImg}" class="ratio_img"
-                    alt="bipro desafío box">
+            <picture>
+            <source media="(min-width: 600px)" srcset="${urlImgXl}" type="image/webp">
+            <img src="${urlImgsm}" class="ratio_img"  alt="Plan 3x7 mulata.fit">
+            </picture>
             </div>
         </div>
         <div class="col-12 my-3">
-            <h2 >💢ENTRENAMIENTOS PERSONALIZADOS POR ZOOM</h2>
+            <h2 class="mb-3">💢 PROMO ASESORÍAS Y RUTINAS PERSONALIZADAS</h2>
             <ul class="list-group list-group-light list-group-small">
-            <li class="list-group-item"> <strong>Valor: </strong>200 USD</li>
-            <li class="list-group-item"><strong>Días: </strong> 3 veces por semana</li>
-            <li class="list-group-item"><strong>El plan incluye: </strong> Rutina para toda la semana,trabajo de cuerpo completo, cardios y</li>
+            <li class="list-group-item"> <strong>Valor: </strong>155 USD</li>
+            <li class="list-group-item"><strong>Duración: </strong> 3 meses</li>
+            <li class="list-group-item"><strong>El plan incluye: </strong> Rutina para toda la semana,trabajo de cuerpo completo, cardios y recomendación nutricional por 3 meses. </li>
+            <li class="list-group-item">✅Guía de alimentación basada en objetivo, preferencia alimenticias y los requerimientos  calóricos y nutricionales  asociados a ti. </li>
+            <li class="list-group-item">✅Geguimientos con fotos medidas y pesos  manteniéndonos informada de resultado y sensaciones.  </li>
+            <li class="list-group-item">✅Guía de suplementación con evidencia científica.  </li>
+            <li class="list-group-item">✅Entrenamientos con videos explicativos SEGUN TU PLAN  (casa o gym) adaptados a tu horio y capacidades físicas.</li>
                </ul>
         </div>
     </div>
@@ -461,6 +476,7 @@ function openInfo() {
 document.getElementById("btngluteos").addEventListener("click", abrirGluteos);
 document.getElementById("asesoria1").addEventListener("click", abrirPlanNutricional);
 document.getElementById("btnEntrenamiento").addEventListener("click", abrirEntrenamiento);
+document.getElementById("btnPlanPremiun").addEventListener("click", abrirPlanPremiun);
 const btnsGrid = document.querySelectorAll("[data-post]");
 btnsGrid.forEach(btn => btn.addEventListener("click", openPost))
 const btnMulata = document.getElementById("sobremulata");
