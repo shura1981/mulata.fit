@@ -2,9 +2,9 @@
 $url= $_SERVER["REQUEST_URI"];
 $url= explode("/", $url);
 $ruta= $url[(count($url)-1)];
-// require 'server/connection/connection.php';
-// $select=$mysqli->query("SELECT * FROM tb_blog WHERE path='$ruta'");
-// $meta = $select->fetch_assoc();
+require 'server/modelos/planesMulata.php';
+$planes= new Tb_planes_mulata();
+$row= json_decode($planes->getPlanes($ruta));
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,17 +43,33 @@ $ruta= $url[(count($url)-1)];
     <script defer type="text/javascript" src="<?php echo URL_VISTA?>js/file-upload.min.js"></script>
     <script defer type="text/javascript" src="<?php echo URL_VISTA?>js/sweetalert2@11/sweetalert2@11.js"></script>
     <script defer src="<?php echo URL_VISTA?>js/service.js?v=<?php echo VERSION?>"></script>
+    <script>
+    const host =
+        <?= json_encode(URL_VISTA,JSON_HEX_QUOT | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_NUMERIC_CHECK) ?>;
+    const dominio = <?= json_encode(URL_SERVER,JSON_HEX_QUOT | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS) ?>;
+    const plan = <?= json_encode($row,JSON_HEX_QUOT | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS) ?>;
+   console.log(plan);
+   </script>
 </head>
 
 <body>
-
     <div class="pay">
         <div class="container relative my-4">
+            <span class="getBack">
+                <a href="<?php echo URL_SERVER?>">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+                    </svg>
+
+                </a>
+
+            </span>
             <div class="row justify-content-center">
-                <div class="col-12 col-md-8 my-4">
-                    <h3 class=" text-center color-primary">Completa el formulario</h3>
+                <div class="col-12 col-lg-10 my-4">
+                    <h3 class=" text-center color-primary">Completa el formulario </h3>
                     <h1 class="mb-4 pb-2 text-center font-italic">y adjunta el comprobante de pago.</h1>
-                    <form id="form" action="mail.php" method="POST">
+                    <form id="form" method="POST">
                         <!-- Name input -->
                         <div class="form-outline mb-4">
                             <input required type="text" id="name" name="name" class="form-control" />
@@ -66,19 +82,13 @@ $ruta= $url[(count($url)-1)];
                             <label class="form-label" for="email">Correo</label>
                         </div>
 
-                        <!-- Subject input -->
-                        <div class="form-outline mb-4">
-                            <input required type="text" id="subject" name="subject" class="form-control" />
-                            <label class="form-label" for="subject">Asunto</label>
+                        <!-- Celular input -->
+                        <div class="form-outline mb-5">
+                            <input required type="number" id="celular" name="celular" class="form-control" />
+                            <label class="form-label" for="celular">Nº de celular</label>
                         </div>
 
-                        <!-- Message input -->
-                        <div class="form-outline mb-4">
-                            <textarea required class="form-control" id="message" name="message" rows="4"></textarea>
-                            <label class="form-label" for="message">Mensage</label>
-                        </div>
-
-                        <div class="file-upload-wrapper my-3 mb-5">
+                        <div class="file-upload-wrapper my-3">
                             <input multiple id="anexos" type="file" class="file-upload-input"
                                 data-mdb-max-file-quantity="3" data-mdb-file-upload="file-upload"
                                 data-mdb-default-msg="Presiona aquí y anexa el comprobante de pago" />
@@ -87,10 +97,13 @@ $ruta= $url[(count($url)-1)];
                             Por favor adjunta el comprobante de pago
                         </div>
                         <!-- Submit button -->
-                        <button id="custom-validation-button" type="submit"
-                            class="btn bg-sucess btn-center my-3 my-md-0 d-block mx-auto">
-                            Enviar
-                        </button>
+                        <div class="pt-5">
+                            <button id="custom-validation-button" type="Submit"
+                                class="btn bg-sucess btn-center my-3 my-md-0 d-block mx-auto ">
+                                Enviar
+                            </button>
+                        </div>
+
 
                         <!-- Status message -->
                         <div id="status" class="py-3"></div>
@@ -144,7 +157,6 @@ $ruta= $url[(count($url)-1)];
 
 
     </div>
-
 </body>
 
 </html>

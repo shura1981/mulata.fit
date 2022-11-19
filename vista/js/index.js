@@ -243,7 +243,7 @@ function abrirEntrenamiento() {
             <ul class="list-group list-group-light list-group-small">
             <li class="list-group-item"> <strong>Valor: </strong>200 USD</li>
             <li class="list-group-item"><strong>Días: </strong> 3 veces por semana</li>
-            <li class="list-group-item"><strong>El plan incluye: </strong> Rutina para toda la semana,trabajo de cuerpo completo, cardios y recomendación nutricional. </li>
+            <li class="list-group-item"><strong>El plan incluye: </strong> Rutina para toda la semana, trabajo de cuerpo completo, cardios y recomendación nutricional. </li>
                </ul>
         </div>
     </div>
@@ -297,11 +297,11 @@ function abrirPlanNutricional() {
             <ul class="list-group list-group-light list-group-small">
             <li class="list-group-item"> <strong>Valor: </strong>75 USD</li>
             <li class="list-group-item"><strong>Duración: </strong> 30 días.</li>
-            <li class="list-group-item"><strong>El plan incluye: </strong> Rutina para toda la semana,trabajo de cuerpo completo, cardios y recomendación nutricional. </li>
+            <li class="list-group-item"><strong>El plan incluye: </strong> Rutina para toda la semana, trabajo de cuerpo completo, cardios y recomendación nutricional. </li>
             <li class="list-group-item">✅Guía de alimentación basada en objetivo, preferencia alimenticias y los requerimientos  calóricos y nutricionales  asociados a ti. </li>
-            <li class="list-group-item">✅Geguimientos con fotos medidas y pesos  manteniéndonos informada de resultado y sensaciones.  </li>
+            <li class="list-group-item">✅Seguimientos con fotos medidas y pesos  manteniéndonos informada de resultado y sensaciones.  </li>
             <li class="list-group-item">✅Guía de suplementación con evidencia científica.  </li>
-            <li class="list-group-item">✅Entrenamientos con videos explicativos SEGUN TU PLAN  (casa o gym) adaptados a tu horio y capacidades físicas.</li>
+            <li class="list-group-item">✅Entrenamientos con videos explicativos SEGÚN TU PLAN  (casa o gym) adaptados a tu horario y capacidades físicas.</li>
                </ul>
         </div>
     </div>
@@ -355,11 +355,11 @@ function abrirPlanPremiun() {
             <ul class="list-group list-group-light list-group-small">
             <li class="list-group-item"> <strong>Valor: </strong>155 USD</li>
             <li class="list-group-item"><strong>Duración: </strong> 3 meses</li>
-            <li class="list-group-item"><strong>El plan incluye: </strong> Rutina para toda la semana,trabajo de cuerpo completo, cardios y recomendación nutricional por 3 meses. </li>
+            <li class="list-group-item"><strong>El plan incluye: </strong> Rutina para toda la semana, trabajo de cuerpo completo, cardios y recomendación nutricional por 3 meses. </li>
             <li class="list-group-item">✅Guía de alimentación basada en objetivo, preferencia alimenticias y los requerimientos  calóricos y nutricionales  asociados a ti. </li>
-            <li class="list-group-item">✅Geguimientos con fotos medidas y pesos  manteniéndonos informada de resultado y sensaciones.  </li>
+            <li class="list-group-item">✅Seguimientos con fotos medidas y pesos  manteniéndonos informada de resultado y sensaciones.  </li>
             <li class="list-group-item">✅Guía de suplementación con evidencia científica.  </li>
-            <li class="list-group-item">✅Entrenamientos con videos explicativos SEGUN TU PLAN  (casa o gym) adaptados a tu horio y capacidades físicas.</li>
+            <li class="list-group-item">✅Entrenamientos con videos explicativos SEGÚN TU PLAN  (casa o gym) adaptados a tu horario y capacidades físicas.</li>
                </ul>
         </div>
     </div>

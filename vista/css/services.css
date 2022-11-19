@@ -100,3 +100,37 @@ body {
 .color-primary {
   color: var(--colorPrimary);
 }
+
+.getBack {
+  height: 46px;
+  width: 46px;
+  display: flex;
+  position: absolute;
+  top: -1%;
+  left: 4%;
+  cursor: pointer;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  transition: background .3s ease;
+}
+
+.getBack:hover {
+  background: #dcdcdc;
+}
+
+.getBack svg {
+  height: 36px;
+  width: 36px;
+}
+
+@media (max-width: 576px) {
+  .getBack {
+    top: -3.5%;
+    left: 2%;
+  }
+}
+
+.form-text-error {
+  color: #ff002b;
+}

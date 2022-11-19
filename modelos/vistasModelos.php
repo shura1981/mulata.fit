@@ -12,5 +12,4 @@ $contenido= "vista/".$vistas.".php";
 else $contenido="404";
 return $contenido;
 }
-
 }

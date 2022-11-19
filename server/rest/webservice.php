@@ -38,6 +38,47 @@ echo json_encode("Ocurrió un error:" . $exception);
 }
 });
 
+$app->get('/pagination', function ()  use($app,$mysqli){
+try{
+$page= $app->request()->params('page');
+$limit= $app->request()->params('limit');
+if(is_null($page))$page=1;
+if(is_null($limit))$limit=10;
+
+$queryLimit="SELECT COUNT(*) AS total FROM tb_productos_megaplexstars WHERE activo=1";
+$select= $mysqli->query($queryLimit);
+$rows = $select->fetch_assoc();
+$total= $rows["total"];
+
+if($limit > $total) $limit=10;
+$countPage= ceil($total / $limit);
+if($page > $countPage) $page= 1;
+
+$totalPages= $countPage;
+$offset= ($page-1) * $limit;
+$isNext= ($page < $totalPages) ? true: false;
+$nextPage= ($page < $totalPages) ? ++$page : $totalPages;
+
+$query= "SELECT codigo, orden, producto, valor,images,ruta,uso, descuento,agotado, promo, category, invima, intro, video, imgtabla, arte, title, description, ingredientes,
+presentation, imageswebp, tablasjpg, html FROM tb_productos_megaplexstars WHERE activo=1 ORDER BY orden LIMIT $limit OFFSET $offset";  
+$data=Array();
+$select= $mysqli->query($query);
+while($row = $select->fetch_assoc())
+{
+$row['images']= json_decode($row['images']);
+$row['tablasjpg']= json_decode($row['tablasjpg']);
+$row['imageswebp']= json_decode($row['imageswebp']);
+array_push($data, $row);
+}
+echo json_encode(Array( "pages"=>$totalPages, "isNext"=>$isNext,
+"nextPage"=>$nextPage, "total"=> $total, "data"=>$data), JSON_NUMERIC_CHECK );
+}catch(Exception $exception){
+echo json_encode("Ocurrió un error:" . $exception);
+}
+});
+    
+ 
+
 //region PUT json
 $app->put('/users/:id', function ($id) use($app) {
 //Request recoge variables de las peticiones http
@@ -474,13 +515,13 @@ else { echo json_encode(array('status' => false, 'msg' => 'No file uploaded.'));
  
 $app->post('/registrocomprobante',function() use($app,$dominio){
 $request = $app->request();
-$name = $request->post('name');
-$lastname = $request->post('lastname');
-$id_vendedor = $request->post('id');
+$nombre = $request->post('nombre');
+$correo = $request->post('correo');
+$celular = $request->post('celular');
 $ruta=array();
 $hoy = date("Y-m-d");  
-$path=$_SERVER['DOCUMENT_ROOT'].'/mulata.fit/uploads/'.$hoy.'/'.$id_vendedor.'/';
-$tempPath= $dominio.$hoy.'/'.$id_vendedor.'/';
+$path=$_SERVER['DOCUMENT_ROOT'].'/mulata.fit/uploads/'.$hoy.'/'.$celular.'/';
+$tempPath= $dominio.$hoy.'/'.$celular.'/';
 //Check if the directory already exists.
 if(!is_dir($path)){
 //Directory does not exist, so lets create it.
@@ -504,10 +545,20 @@ exit;
 }
 move_uploaded_file($_FILES['file']['tmp_name'][$i], $filePath);
 }
+//add db
+
+// UPDATE tb_pagos_planes_mulata SET id= ,fechaI= ,fechaF= ,comprobantes= ,celular=  WHERE 1
+
+ 
+
+
+
+
 echo json_encode(array(
 'status'        => true,
-'name'          =>$name,
-'lastname'      =>$lastname,
+'nombre'          =>$nombre,
+'correo'      =>$correo,
+'celular'       =>$celular,
 'ruta'          =>$ruta
 ));
 

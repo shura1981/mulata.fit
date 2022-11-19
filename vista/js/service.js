@@ -1,18 +1,49 @@
 'use strict';
 
 class Service {
+
     constructor(url) {
         this.url = url;
         this.data = new FormData();
         this.inputElement = document.querySelector('input[type=file]');
         this.button = document.getElementById("custom-validation-button");
         this.inputElement.addEventListener("change", this.handleFiles.bind(this), false);
-        this.button.addEventListener("click", this.sendFiles.bind(this));
+        // this.button.addEventListener("click", this.sendFiles.bind(this));
+        this.form = document.getElementById("form");
         this.isValid = false;
-    }
+        this.s = null;
 
+        this.form.addEventListener("submit", e => {
+            e.preventDefault();
+
+            this.sendFiles();
+
+
+
+        });
+
+    }
+    msgSending() {
+        if (this.s) {
+            this.s.close();
+            this.s = null;
+        }
+        else {
+            this.s = Swal.fire({
+                title: '¡Ya casi está listo!',
+                html: 'Enviando comprobante de pago',
+                // timer: 2000,
+                backdrop: false,
+                timerProgressBar: true,
+                didOpen: () => {
+                    Swal.showLoading()
+                }
+            });
+        }
+
+    }
     request() {
-        // msgSending();
+        this.msgSending();
         let request = new XMLHttpRequest();
         request.open('POST', this.url);
         // upload progress event
@@ -23,26 +54,27 @@ class Service {
             console.log(percent_complete);
         });
         // AJAX request finished event
-        request.addEventListener('load', function (e) {
+        request.addEventListener('load', (function (e) {
             // HTTP status message
-            // msgSendingReset();
+            this.msgSending();
             console.log(request.response);
             const res = JSON.parse(request.response);
             if (request.status !== 200 && request.status !== 201) {
-                console.log(`ocurrió un error: ${request.status}`, res, (typeof request.status));
-                // this.showErrorFetch(res.error);
+                // console.log(`ocurrió un error: ${request.status}`, res, (typeof request.status));
+                this.showErrorFetch("Ocurrió un error al enviar el formulario");
                 //Message
                 return;
             }
 
-            // showSuccess("Datos enviados con éxito");
-            console.log(request.status, res);
+            this.form.reset();
+            this.showSuccess("Datos enviados con éxito");
+            // console.log(request.status, res);
             // setTimeout(() => {
             //   location.replace("https://nutramerican.com");
             // }, 5000);
             // request.response will hold the response from the server
 
-        });
+        }).bind(this));
         // send POST request to server side script
         request.send(this.data);
     }
@@ -71,43 +103,43 @@ class Service {
         this.forceFocus();
         return this.checkValues()
     }
-    forceFocus() { inputs.forEach(i => i.focus()); btnSend.focus(); }
-    checkValues() {
-        const listValues = [];
-        //Obligatorios
-        listValues.push(form.nombre_legal.value);
-        listValues.push(form.documento_nit.value);
-        listValues.push(form.nombre_establecimiento.value);
-        listValues.push(form.direccion_comercial.value);
-        listValues.push(form.direccion_residencia.value);
-        listValues.push(form.contacto.celular.value);
-        listValues.push(form.correo.value);
-        listValues.push(form.responsable_pagos.value);
-        return listValues.every(value => !isEmpty(value));
+    isEmpty = str => !str.trim().length;
+    isEmail = value => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+    validar(value, type) {
+        if (type === "text") return !this.isEmpty(value);
+        if (type === "email") return (!this.isEmpty(value) && this.isEmail(value));
+        if (type === "number") return (Number(value) > 0)
+        return false;
+    }
+
+    checkValues(inputs) {
+        return inputs.every(input => this.validar(input.value, input.type));
+    }
+
+    getKeysForm(form) {
+        const formEntries = new FormData(form).entries();
+        return Object.assign(...Array.from(formEntries, ([name, value]) => ({ [name]: value })));
     }
     sendFiles() {
-        //#region file selected by the user
-        // in case of multiple files append each of them
-        // inputElements[4].files.forEach(file => {
-        //   data.append('file', file );
-        // });
-        //#endregion
+        // .querySelectorAll('input:not([type="hidden"]):not([value=""])')
+        const label= document.getElementById("vanexos");
+        const inputs = this.form.querySelectorAll('input:not([type="file"])')
         let isFileValidate = true;
         this.inputElement.files.forEach(file => {
-            console.log(file);
-            // isFileValidate = (input.files.length > 0);
-            // this.showError(isFileValidate, input.id)
             this.data.append('file[]', file);
         });
-        // this.validateJson() && 
-        if (isFileValidate) {
-            this.data.append('form', JSON.stringify(form));
-            this.data.append('name', 'Steven');
-            this.data.append('lastname', 'Realpe Parra' );
-            this.data.append('id', '6394880' );
-            
+        if (this.inputElement.files.length < 1 || !this.checkValues(Array.from(inputs)) ) isFileValidate = false;
+
+       if( this.inputElement.files.length < 1) label.classList.remove("d-none")
+       else label.classList.add("d-none")
+
+
+         if (isFileValidate) {
+            const f = this.getKeysForm(this.form);
+            this.data.append('nombre', f.name);
+            this.data.append('correo', f.email);
+            this.data.append('celular', parseInt(f.celular));
             this.request();
-            // console.log(JSON.stringify(form));
         } else this.showErrorFetch("Datos incompletos");
     }
 
@@ -116,7 +148,7 @@ class Service {
             icon: 'success',
             title: title,
             showConfirmButton: false,
-            timer: 1500
+            footer: '<a href="https://mulata.fit">Volver</a>'
         })
     }
     showErrorFetch(text, status) {
@@ -131,5 +163,8 @@ class Service {
 }
 
 new Service('http://localhost/mulata.fit/server/rest/webservice.php/registrocomprobante');
+
+
+
 
 

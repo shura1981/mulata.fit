@@ -8,11 +8,3 @@ else if($resp=="products") include "./vista/products.php";
 else if($resp=="services") include "./vista/services.php";
 else if($resp=="template") include "./vista/template.php";
 else include $resp;
-
-
-
-
-
-
-
-
