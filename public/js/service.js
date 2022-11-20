@@ -162,7 +162,7 @@ class Service {
 
 }
 
-new Service('http://localhost/mulata.fit/server/rest/webservice.php/registrocomprobante');
+new Service('http://localhost/mulata.fit/api/registrocomprobante');
 
 
 

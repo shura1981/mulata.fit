@@ -6,15 +6,15 @@
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
     <title>Mulata Fit | Las mejores asesorías fitness</title>
     <link rel="preload" as="style" href="<?php echo URL_VISTA?>css/index.css?v=<?php echo VERSION?>" />
-    <?php include "./vista/partials/metas.php" ?>
-    <?php include "./vista/partials/links.php" ?>
+    <?php include "./views/partials/metas.php" ?>
+    <?php include "./views/partials/links.php" ?>
     <link rel="stylesheet" href="<?php echo URL_VISTA?>css/index.css?v=<?php echo VERSION?>" />
     <link rel="stylesheet" href="<?php echo URL_VISTA?>css/footer.css?v=<?php echo VERSION?>" />
     <script defer type="text/javascript" src="<?php echo URL_VISTA?>js/index.js?v=<?php echo VERSION?>"></script>
 </head>
 
 <body>
-    <?php include "./vista/partials/nav.php" ?>
+    <?php include "./views/partials/nav.php" ?>
     <div style="position: relative; background: var(--footer);" class="swiper mySwiper2">
         <div class="swiper-wrapper">
             <div class="swiper-slide ratio ratio-responsive">
@@ -1340,8 +1340,8 @@
             </div>
         </div>
     </footer>
-    <?php include "./vista/partials/particules.php" ?>
-    <?php include "./vista/partials/schema_home.php" ?>
+    <?php include "./views/partials/particules.php" ?>
+    <?php include "./views/partials/schema_home.php" ?>
 </body>
 
 </html>

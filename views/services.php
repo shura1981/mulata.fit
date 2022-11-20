@@ -2,7 +2,7 @@
 $url= $_SERVER["REQUEST_URI"];
 $url= explode("/", $url);
 $ruta= $url[(count($url)-1)];
-require 'server/modelos/planesMulata.php';
+require 'modelos/planesMulata.php';
 $planes= new Tb_planes_mulata();
 $row= json_decode($planes->getPlanes($ruta));
 ?>

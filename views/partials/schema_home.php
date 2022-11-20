@@ -12,13 +12,13 @@
         "articleSection": "suplementos nutricionales y asesorías",
         "url": "https://mulata.fit",
         "mainEntityOfPage": "https://mulata.fit",
-        "image": "https://mulata.fit/img/demos/gym/carousels/facility.webp",
+        "image": "https://mulata.fit/public/img/demos/gym/carousels/facility.webp",
         "publisher": {
             "@type": "Organization",
             "name": "mulatafit",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://mulata.fit/img/demos/gym/carousels/facility.webp"
+                "url": "https://mulata.fit/public/img/demos/gym/carousels/facility.webp"
             }
         }
     }

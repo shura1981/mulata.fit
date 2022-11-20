@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php  
-require_once('server/modelos/productos.php');
+require_once('modelos/productos.php');
 $p= new Productos();
  
 ?>
@@ -11,8 +11,8 @@ $p= new Productos();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda mulata fit</title>
-    <?php include "./vista/partials/metaproducts.php" ?>
-    <?php include "./vista/partials/links.php" ?>
+    <?php include "./views/partials/metaproducts.php" ?>
+    <?php include "./views/partials/links.php" ?>
     <link rel="stylesheet" href="<?php echo URL_VISTA?>css/productos.css?v=<?php echo VERSION?>" />
     <script defer type="text/javascript" src="<?php echo URL_VISTA?>js/toast.min.js"></script>
     <!-- <script defer type="text/javascript" src="<?php echo URL_VISTA?>/ecommerceNutra/findProduct/index.js"></script> -->
@@ -150,7 +150,7 @@ $p= new Productos();
         <div class="loader">Loading...</div>
     </div>
 
-    <?php include "./vista/partials/nav.php" ?>
+    <?php include "./views/partials/nav.php" ?>
     <!--Menú-->
 
     <div style="--swiper-navigation-color: rgb(0, 102, 255); 
@@ -661,7 +661,7 @@ $p= new Productos();
 
 
     <script src="<?php echo URL_VISTA?>js/tienda.js?v=<?php echo VERSION?>"></script>
-    <?php include "./vista/partials/schema_products.php" ?>
+    <?php include "./views/partials/schema_products.php" ?>
 </body>
 
 

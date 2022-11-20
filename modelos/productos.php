@@ -13,8 +13,8 @@ class Productos
 
  public function ProductosDisponibles()
 { 
-    // require '../connection/connection.php'; 
-    require 'server/connection/connection.php'; 
+   
+    require 'connection/connection.php'; 
 
     try{
         $query="SELECT codigo,ruta, orden,producto, imageswebp, tablasjpg, images, intro, thumbnails, descuento, promo, bestsale, valor, category, description

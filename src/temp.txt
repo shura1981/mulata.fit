@@ -17,3 +17,24 @@
 
   gtag('config', 'G-9DG64H7P7P');
 </script>
+
+
+//descargar un fichero
+<?php
+  $filename="/opt/lampp/htdocs/mulata.fit/public/img/grid/grid1.webp";
+  header("Content-disposition: attachment;filename=$filename");
+  readfile($filename);
+?>
+
+
+
+
+//Notas
+//1. subir archivos al servidor buscar-> uploadVisitas
+//$_POST['observaciones'] y $app->request()->post('observaciones') es lo mismo
+// htmlspecialchars() elimina los caracteres especiales que generan error en las consultas update e insert de mysql
+
+//2. query fecha, solo mes y año. En mysql.
+// SELECT DATE_FORMAT(fecha, '%Y %m') AS AÑO_MES FROM `tb_maestro_planilla` WHERE `mensajero`->'$.id'=52698507
+// GROUP BY AÑO_MES
+// clientesxvendedorall clientes por vendedor

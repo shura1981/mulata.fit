@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Template</title>
-    <?php include "./vista/partials/links.php" ?>
+    <?php include "./views/partials/links.php" ?>
     <style>
 
 

@@ -1,0 +1,46 @@
+<?php 
+$div= fn(int $index)=> "<p>Hola a todos ustedes $index</p>";
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba</title>
+</head>
+
+<body>
+    <h1>Hola
+        <?php echo date('Y') ?>
+    </h1>
+    <?php 
+ $link= realpath( './')."/modelos/clientes.php";
+ require $link;
+ $cliente= new Tb_clientes("Steven realpe", "realpelee@gmail.com", 3175346352);
+
+$res= Tb_clientes::add($cliente);
+echo $res;
+
+  ?>
+
+    <?php foreach([1,3,4,5] as $key=>$value): ?>
+    <p>
+        <?php echo  $div($value)   ?>
+    </p>
+    <?php endforeach; ?>
+
+<?php 
+
+$tags = get_meta_tags('https://www.youtube.com/watch?v=C_rre27WM94');
+$object = (object) $tags;
+
+echo json_encode($object);
+ 
+?>
+
+</body>
+
+</html>

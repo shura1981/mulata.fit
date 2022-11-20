@@ -542,7 +542,7 @@ form.addEventListener('submit', (e) => {
     document.getElementById('status').innerHTML = `<p class="note note-light">Sending mail...</p>`;
   }
 
-  const url = `${dominio}mail.php`;
+  const url = `${dominio}/requests/mail.php`;
   console.log(url);
   fetch(url, {
     method: 'POST',

@@ -9,7 +9,8 @@ $this->celular = $celular;
 public static function get()
 { 
 try{
-require realpath(__DIR__.'/../').'/connection/connection.php';      
+    require 'connection/connection.php'; 
+// require realpath(__DIR__.'/../').'/connection/connection.php';      
 $query="SELECT * FROM tb_clientes_mulata";   
 $select=$mysqli->query($query);
 $rows= Array();
@@ -27,7 +28,7 @@ return json_encode($result, JSON_NUMERIC_CHECK);
 public static function add(Tb_clientes $cliente)
 { 
 try{
-require realpath(__DIR__.'/../').'/connection/connection.php';    
+    require 'connection/connection.php';  
 $select=$mysqli->query( "SELECT * FROM tb_clientes_mulata WHERE correo='$cliente->correo'"  );
 if(  $select->fetch_assoc()){
 $result=Array("msg"=>"ya existe");
@@ -59,9 +60,6 @@ return json_encode($result, JSON_NUMERIC_CHECK);
 
 }
 
-$cliente= new Tb_clientes("Steven realpe", "realpelee@gmail.com", 3175346352);
 
-$res= Tb_clientes::add($cliente);
-echo $res;
 
  
