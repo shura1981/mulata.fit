@@ -27,7 +27,14 @@
 ?>
 
 
+<?php 
 
+$tags = get_meta_tags('https://www.youtube.com/watch?v=C_rre27WM94');
+$object = (object) $tags;
+
+echo json_encode($object);
+ 
+?>
 
 //Notas
 //1. subir archivos al servidor buscar-> uploadVisitas
@@ -38,3 +45,14 @@
 // SELECT DATE_FORMAT(fecha, '%Y %m') AS AÑO_MES FROM `tb_maestro_planilla` WHERE `mensajero`->'$.id'=52698507
 // GROUP BY AÑO_MES
 // clientesxvendedorall clientes por vendedor
+
+
+
+mysqlite
+
+{"affected_rows":null,"client_info":null,"client_version":null,
+"connect_errno":null,"connect_error":null,
+"errno":null,"error":null,"error_list":null,
+"field_count":null,"host_info":null,"info":null,"insert_id":null,
+"server_info":null,"server_version":null,"sqlstate":null,"protocol_version":null,
+"thread_id":null,"warning_count":null}

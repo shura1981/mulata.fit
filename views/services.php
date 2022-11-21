@@ -3,8 +3,8 @@ $url= $_SERVER["REQUEST_URI"];
 $url= explode("/", $url);
 $ruta= $url[(count($url)-1)];
 require 'modelos/planesMulata.php';
-$planes= new Tb_planes_mulata();
-$row= json_decode($planes->getPlanes($ruta));
+// $planes= new Tb_planes_mulata();
+$row= json_decode(Tb_planes_mulata::getPlanes($ruta));
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -113,9 +113,6 @@ $row= json_decode($planes->getPlanes($ruta));
 
             </div>
         </div>
-
-
-
         <div class="description-pay">
 
             <div class="relative">
@@ -153,10 +150,13 @@ $row= json_decode($planes->getPlanes($ruta));
 
 
         </div>
-
-
-
     </div>
+    <div class="scrollDown">
+            <span class="wrapper-scrolldown js-scrolldown">
+                <span></span>
+            </span>
+        </div>
+
 </body>
 
 </html>

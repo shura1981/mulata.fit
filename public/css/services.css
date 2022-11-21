@@ -8,13 +8,19 @@ body {
 .pay {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   width: 100%;
   overflow: hidden;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 768px) {
+  .pay {
+    grid-template-columns: 1fr;
+  }
 }
 
 .description-pay {
-  background: url(https://mulata.fit/vista/img/carousels/resources.webp);
+  background: url(https://mulata.fit/public/img/carousels/resources.webp);
   background-size: cover;
   color: #fff;
   padding: 3rem 1.5rem;
@@ -133,4 +139,62 @@ body {
 
 .form-text-error {
   color: #ff002b;
+}
+
+@keyframes scroll-ani {
+  0% {
+    opacity: 0;
+    top: 10%;
+  }
+  50% {
+    opacity: 1;
+    top: 40%;
+  }
+  100% {
+    opacity: 0;
+    top: 80%;
+  }
+}
+
+.scrollDown {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 4%;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  z-index: 50;
+}
+
+.wrapper-scrolldown {
+  cursor: pointer;
+  width: 40px;
+  height: 60px;
+  border: 1px solid #e91e63;
+  display: block;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+@media (min-width: 600px) {
+  .wrapper-scrolldown {
+    display: none;
+  }
+}
+
+.wrapper-scrolldown span {
+  width: 5px;
+  height: 10px;
+  opacity: 0;
+  background-color: #e91e63;
+  display: block;
+  text-align: center;
+  border-radius: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 10px;
+  margin: 0 auto;
+  animation: scroll-ani 1.2s linear infinite;
 }

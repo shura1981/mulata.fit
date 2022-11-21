@@ -1,7 +1,5 @@
 'use strict';
-
 class Service {
-
     constructor(url) {
         this.url = url;
         this.data = new FormData();
@@ -13,15 +11,42 @@ class Service {
         this.isValid = false;
         this.s = null;
 
+        this.notiScroll= document.querySelector(".scrollDown");
+
         this.form.addEventListener("submit", e => {
             e.preventDefault();
-
             this.sendFiles();
-
-
-
         });
 
+        console.log(this.notiScroll);
+
+        // window.onscroll = function(ev) {
+        //     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        //        console.log("bottom");
+        //     }
+        // };
+
+
+const loadElements = () => {
+const options = {
+rootMargin: '0px 0px -200px 0px'
+}
+
+const observer = new IntersectionObserver((entries, observer) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+ entry.target.classList.add("d-none");
+observer.unobserve(entry.target);
+} else {
+return;
+}
+})
+}, options);
+observer.observe(this.notiScroll);
+}
+
+
+loadElements();
     }
     msgSending() {
         if (this.s) {
@@ -122,23 +147,23 @@ class Service {
     }
     sendFiles() {
         // .querySelectorAll('input:not([type="hidden"]):not([value=""])')
-        const label= document.getElementById("vanexos");
+        const label = document.getElementById("vanexos");
         const inputs = this.form.querySelectorAll('input:not([type="file"])')
         let isFileValidate = true;
         this.inputElement.files.forEach(file => {
             this.data.append('file[]', file);
         });
-        if (this.inputElement.files.length < 1 || !this.checkValues(Array.from(inputs)) ) isFileValidate = false;
+        if (this.inputElement.files.length < 1 || !this.checkValues(Array.from(inputs))) isFileValidate = false;
 
-       if( this.inputElement.files.length < 1) label.classList.remove("d-none")
-       else label.classList.add("d-none")
+        if (this.inputElement.files.length < 1) label.classList.remove("d-none")
+        else label.classList.add("d-none")
 
-
-         if (isFileValidate) {
+        if (isFileValidate) {
             const f = this.getKeysForm(this.form);
             this.data.append('nombre', f.name);
             this.data.append('correo', f.email);
             this.data.append('celular', parseInt(f.celular));
+            this.data.append('dias',plan.dia);
             this.request();
         } else this.showErrorFetch("Datos incompletos");
     }
@@ -161,8 +186,7 @@ class Service {
     }
 
 }
-
-new Service('http://localhost/mulata.fit/api/registrocomprobante');
+new Service('../api/registrocomprobante');
 
 
 
