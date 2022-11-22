@@ -10,7 +10,7 @@ class Service {
         this.form = document.getElementById("form");
         this.isValid = false;
         this.s = null;
-
+        
         this.notiScroll= document.querySelector(".scrollDown");
 
         this.form.addEventListener("submit", e => {
@@ -36,6 +36,8 @@ const observer = new IntersectionObserver((entries, observer) => {
 entries.forEach(entry => {
 if (entry.isIntersecting) {
  entry.target.classList.add("d-none");
+ document.getElementById("custom-validation-button").classList.remove("d-none");
+ document.getElementById("custom-validation-button").classList.add("d-block");
 observer.unobserve(entry.target);
 } else {
 return;
