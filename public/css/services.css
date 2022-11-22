@@ -198,3 +198,23 @@ body {
   margin: 0 auto;
   animation: scroll-ani 1.2s linear infinite;
 }
+
+@media (max-width: 600px) {
+  #custom-validation-button {
+    transition: all .4s ease-in;
+  }
+}
+
+.d-hidden {
+  visibility: hidden;
+  z-index: -1;
+  opacity: 0;
+}
+
+@media (min-width: 768px) {
+  .d-md-show {
+    visibility: visible;
+    z-index: 1;
+    opacity: 1;
+  }
+}

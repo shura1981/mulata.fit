@@ -128,6 +128,7 @@ body {
 
 .page-item {
   cursor: pointer;
+  margin-bottom: 0 !important;
 }
 
 .select-arrow:before {

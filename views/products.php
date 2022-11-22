@@ -77,7 +77,8 @@ $p= new Productos();
     }
 
     .bg-slider {
-        background: #1266f1;
+        background: #fc466b;
+    background: linear-gradient(128deg, #fc466b 0%, #f1266b 100%);
     }
 
     span.badge.bg-danger.ms-2 {
@@ -133,6 +134,44 @@ $p= new Productos();
     .mask{
         cursor: pointer;
     }
+
+
+@media(max-width:690px) and (orientation: landscape){
+    .ratio-16x9 {
+    --mdb-aspect-ratio: 26.25% !important;
+}
+}
+
+/* .ratio::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, #0000003b, #0000);
+} */
+/* 
+#showCard{
+    position:relative;
+}
+
+#showCard::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #ffffff42;
+    border-radius: 50%;
+    transform: scale(1.5);
+    z-index: -1;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+} */
+
+
     </style>
 
 

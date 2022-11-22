@@ -36,9 +36,8 @@ const observer = new IntersectionObserver((entries, observer) => {
 entries.forEach(entry => {
 if (entry.isIntersecting) {
  entry.target.classList.add("d-none");
- document.getElementById("custom-validation-button").classList.remove("d-none");
- document.getElementById("custom-validation-button").classList.add("d-block");
-observer.unobserve(entry.target);
+ document.getElementById("custom-validation-button").classList.remove("d-hidden");
+ observer.unobserve(entry.target);
 } else {
 return;
 }

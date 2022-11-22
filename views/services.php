@@ -101,7 +101,7 @@ $row = json_decode(Tb_planes_mulata::getPlanes($ruta));
                         <!-- Submit button -->
                         <div class="pt-3">
                             <button id="custom-validation-button" type="Submit"
-                                class="btn bg-sucess btn-center my-3 my-md-0 d-none d-md-block mx-auto ">
+                                class="btn bg-sucess btn-center my-3 my-md-0 d-block d-hidden d-md-show mx-auto ">
                                 Enviar Comprobante
                             </button>
                         </div>
