@@ -35,7 +35,6 @@
 
 
             </li>
-            <li id="pagos" class="menu"> <a>PAGOS</a></li>
             <li id="contacto" class="menu"> <a href="<?php echo URL_SERVER?>#contacto-info">CONTACTO</a> </li>
         </ul>
         <span id="showCard" class="car-shopping me-3 me-md-5">

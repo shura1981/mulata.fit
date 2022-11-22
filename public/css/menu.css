@@ -284,15 +284,17 @@ ul.submenu {
   left: 0;
   background: var(--footer);
   z-index: 1;
-  width: 180px;
+  width: 171px;
   transform: scaleY(0);
   transform-origin: top;
   transition: transform 0.26s ease;
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.085) !important;
+  border-radius: 6px;
+  overflow: hidden;
 }
 
 .width160 {
-  width: 160px !important;
+  width: 158px !important;
 }
 
 .menu:hover>ul.submenu {
