@@ -1,3 +1,6 @@
+SetEnv MYVAR mivalor
+
+
 
 # Impedir que se pueda ver el listado de contenidos de un directorio
 Options All -Indexes
