@@ -8,4 +8,6 @@ else if($resp=="products") include "products.php";
 else if($resp=="services") include "services.php";
 else if($resp=="template") include "template.php";
 else if($resp=="test") include "public/test.html";
+else if($resp=="login") include "login.php";
+else if($resp=="registre") include "registre.php";
 else include $resp;

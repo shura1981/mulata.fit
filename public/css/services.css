@@ -132,7 +132,7 @@ body {
 
 @media (max-width: 576px) {
   .getBack {
-    top: -3.5%;
+    top: -2.5%;
     left: 2%;
   }
 }
@@ -160,7 +160,7 @@ body {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 8%;
+  bottom: 5%;
   width: 60px;
   height: 60px;
   margin: 0 auto;
@@ -175,12 +175,6 @@ body {
   display: block;
   margin: 0 auto;
   border-radius: 20px;
-}
-
-@media (min-width: 600px) {
-  .wrapper-scrolldown {
-    display: none;
-  }
 }
 
 .wrapper-scrolldown span {
@@ -199,10 +193,8 @@ body {
   animation: scroll-ani 1.2s linear infinite;
 }
 
-@media (max-width: 600px) {
-  #custom-validation-button {
-    transition: all .4s ease-in;
-  }
+#custom-validation-button {
+  transition: all .4s ease-in;
 }
 
 .d-hidden {
@@ -211,10 +203,15 @@ body {
   opacity: 0;
 }
 
-@media (min-width: 768px) {
-  .d-md-show {
-    visibility: visible;
-    z-index: 1;
-    opacity: 1;
-  }
+.description-pay a, .description-pay a:link {
+  color: white !important;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 90px auto;
+}
+
+.grid p {
+  margin-bottom: 0;
 }

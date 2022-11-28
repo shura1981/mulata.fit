@@ -18,7 +18,7 @@ class Service {
             this.sendFiles();
         });
 
-        console.log(this.notiScroll);
+      
 
         // window.onscroll = function(ev) {
         //     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
@@ -28,8 +28,10 @@ class Service {
 
 
 const loadElements = () => {
+
+ const marginBottom=  (window.innerWidth < 600) ?  -300 : -100;
 const options = {
-rootMargin: '0px 0px -400px 0px'
+rootMargin: `0px 0px ${marginBottom}px 0px`
 }
 
 const observer = new IntersectionObserver((entries, observer) => {
@@ -48,6 +50,9 @@ observer.observe(this.notiScroll);
 
 
 loadElements();
+const titles= document.querySelectorAll(".titles");
+titles[0].innerText=plan.nombre;
+titles[1].innerText= "$"+plan.valor+" "+plan.moneda;
     }
     msgSending() {
         if (this.s) {
@@ -185,7 +190,7 @@ loadElements();
             footer: '<a href="#">Por favor revisa el formulario</a>'
         })
     }
-
+   
 }
 new Service('../api/registrocomprobante');
 

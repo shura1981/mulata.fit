@@ -114,6 +114,33 @@ class Utils
             return array();
     }
 
+    public static function expireCookie($maxtime = 30)
+    {
+        // $maxtime = 300 for 5 minutes
+        session_start(['gc_maxlifetime' => $maxtime]);
+        $_sess_name = session_name();
+        $_sess_id = session_id();
+        setcookie($_sess_name, $_sess_id, time() + $maxtime, '/');
+    }
+
+    public static function clearcookieInactive($inactivo = 900)
+    {
+        session_start();
+        //  900s => 15 minutos
+        if (isset($_SESSION['tiempo'])) {
+            $vida_session = time() - $_SESSION['tiempo'];
+            if ($vida_session > $inactivo) {
+                session_destroy();
+                header("Location: login");
+            }
+        }
+
+        $_SESSION['tiempo'] = time();
+    }
+
+
+
+
     public static function getFoto($fotoBase64, $id, string $upload = '/uploads/images', string $url = "http://")
     {
         if (strlen($fotoBase64) > 0) {
@@ -140,12 +167,13 @@ class Utils
         }
         return '';
     }
-    public static function resizeImage($filename, $newwidth, $newheight){
+    public static function resizeImage($filename, $newwidth, $newheight)
+    {
         list($width, $height) = getimagesize($filename);
-        if($width > $height && $newheight < $height){
+        if ($width > $height && $newheight < $height) {
             $newheight = $height / ($width / $newwidth);
         } else if ($width < $height && $newwidth < $width) {
-            $newwidth = $width / ($height / $newheight);   
+            $newwidth = $width / ($height / $newheight);
         } else {
             $newwidth = $width;
             $newheight = $height;
@@ -216,7 +244,7 @@ class Utils
     }
 
 
-    public static function webpImage2($source, $quality = 100, $removeOld = false,  $nAncho = 300, $nAlto = 600)
+    public static function webpImage2($source, $quality = 100, $removeOld = false, $nAncho = 300, $nAlto = 600)
     {
         $dir = pathinfo($source, PATHINFO_DIRNAME);
         $name = pathinfo($source, PATHINFO_FILENAME);

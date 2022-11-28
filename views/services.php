@@ -49,8 +49,8 @@ $row = json_decode(Tb_planes_mulata::getPlanes($ruta));
         const host =
         <?= json_encode(URL_VISTA, JSON_HEX_QUOT | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_NUMERIC_CHECK) ?>;
         const dominio = <?= json_encode(URL_SERVER, JSON_HEX_QUOT | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS) ?>;
-        const plan = <?= json_encode($row,  JSON_HEX_QUOT | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS) ?>;
-        console.log(plan);
+        const plan = <?= json_encode($row, JSON_HEX_QUOT | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS) ?>;
+      
     </script>
 </head>
 
@@ -71,7 +71,11 @@ $row = json_decode(Tb_planes_mulata::getPlanes($ruta));
                 <div class="col-12 col-lg-10 my-4">
                     <h3 class=" text-center color-primary">Completa el formulario </h3>
                     <h2 class="mb-4 pb-2 text-center font-italic">y adjunta el comprobante de pago.</h2>
-                    <form id="form" method="POST">
+               <div class="grid">
+               <h5>Plan:    </h5> <p class="titles d-block text-bold">Plan gluteos 24k</p>
+                <h5>Valor:  </h5>  <p class="titles d-block text-bold">150US</p>  
+               </div>
+                    <form class="mt-4" id="form" method="POST">
                         <!-- Name input -->
                         <div class="form-outline mb-4">
                             <input required type="text" id="name" name="name" class="form-control" />
@@ -115,11 +119,7 @@ $row = json_decode(Tb_planes_mulata::getPlanes($ruta));
 
             </div>
 
-            <div class="scrollDown">
-                <span class="wrapper-scrolldown js-scrolldown">
-                    <span></span>
-                </span>
-            </div>
+
 
         </div>
         <div class="description-pay">
@@ -160,7 +160,11 @@ $row = json_decode(Tb_planes_mulata::getPlanes($ruta));
 
         </div>
     </div>
-
+    <div class="scrollDown">
+        <span class="wrapper-scrolldown js-scrolldown">
+            <span></span>
+        </span>
+    </div>
 </body>
 
 </html>

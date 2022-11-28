@@ -1,6 +1,28 @@
 <?php 
 $div= fn(int $index)=> "<p>Hola a todos ustedes $index</p>";
+ 
+session_start(); 
+if(isset($_SESSION['nombredelusuario']))
+{
+	$usuarioingresado = $_SESSION['nombredelusuario'];
+	echo "<h1>Bienvenido: $usuarioingresado </h1>";
+
+     
+
+}
+else
+{
+	header('location: login');
+}
+
+if(isset($_POST['btncerrar']))
+{
+	session_destroy();
+	header('location: login');
+}
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +53,9 @@ echo $res;
         <?php echo  $div($value)   ?>
     </p>
     <?php endforeach; ?>
-
+    <form method="POST">
+        <input type="submit" value="Cerrar sesión" name="btncerrar" />
+    </form>
 
 
 </body>

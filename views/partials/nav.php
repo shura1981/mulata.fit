@@ -1,28 +1,32 @@
 <header>
     <nav class="nav">
-        <a class="navbar-brand" href="<?php echo URL_SERVER?>">
-            <img src="<?php echo URL_VISTA?>img/logo.webp" height="36" alt="<?php echo URL_SERVER?>" loading="lazy"
+        <a class="navbar-brand" href="<?php echo URL_SERVER ?>">
+            <img src="<?php echo URL_VISTA ?>img/logo.webp" height="36" alt="<?php echo URL_SERVER ?>" loading="lazy"
                 style="margin-top: -3px" />
         </a>
         <ul class="nav-item">
-            <li class="menu "> <a href="<?php echo URL_SERVER?>">INICIO</a></li>
+            <li class="menu "> <a href="<?php echo URL_SERVER ?>">INICIO</a></li>
             <li id="servicios" class="menu">
-                <a href="<?php echo URL_SERVER?>products">TIENDA </a>
+                <a href="<?php echo URL_SERVER ?>products">TIENDA </a>
                 <svg aria-hidden="true" focusable="false" role="presentation" viewBox="0 0 28 16">
                     <path d="M1.57 1.59l12.76 12.77L27.1 1.59" stroke-width="2" fill="none" fill-rule="evenodd"></path>
                 </svg>
                 <ul class="submenu">
-                    <li><a class="d-block " style="text-align:left" href="<?php echo URL_SERVER?>products?category=perdidapeso">Control de peso </a></li>
-                    <li> <a class="d-block " style="text-align:left" href="<?php echo URL_SERVER?>products?category=modulosproteicos">Ganar masa muscular </a>
+                    <li><a class="d-block " style="text-align:left"
+                            href="<?php echo URL_SERVER ?>products?category=perdidapeso">Control de peso </a></li>
+                    <li> <a class="d-block " style="text-align:left"
+                            href="<?php echo URL_SERVER ?>products?category=modulosproteicos">Ganar masa muscular </a>
                     </li>
-                    <li> <a class="d-block " style="text-align:left" href="<?php echo URL_SERVER?>products?category=hipercaloricos">Hipercalóricos</a></li>
-                    <li><a class="d-block " style="text-align:left" href="<?php echo URL_SERVER?>products?category=energiarecuperacion">Aminoácidos </a></li>
+                    <li> <a class="d-block " style="text-align:left"
+                            href="<?php echo URL_SERVER ?>products?category=hipercaloricos">Hipercalóricos</a></li>
+                    <li><a class="d-block " style="text-align:left"
+                            href="<?php echo URL_SERVER ?>products?category=energiarecuperacion">Aminoácidos </a></li>
                 </ul>
 
 
 
             </li>
-            <li class="menu"> <a href="<?php echo URL_SERVER?>#info-servicios">
+            <li class="menu"> <a href="<?php echo URL_SERVER ?>#info-servicios">
                     ASESORÍAS</a>
                 <svg aria-hidden="true" focusable="false" role="presentation" viewBox="0 0 28 16">
                     <path d="M1.57 1.59l12.76 12.77L27.1 1.59" stroke-width="2" fill="none" fill-rule="evenodd"></path>
@@ -35,7 +39,7 @@
 
 
             </li>
-            <li id="contacto" class="menu"> <a href="<?php echo URL_SERVER?>#contacto-info">CONTACTO</a> </li>
+            <li id="contacto" class="menu"> <a href="<?php echo URL_SERVER ?>#contacto-info">CONTACTO</a> </li>
         </ul>
         <span id="showCard" class="car-shopping me-3 me-md-5">
             <span class="counter">
@@ -60,23 +64,23 @@
             <div class="swiper mySwiper ">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"
-                        style="background-image: url('<?php echo URL_VISTA?>img/carousels/packages.webp'); background-size: cover; background-position: top center;  ">
+                        style="background-image: url('<?php echo URL_VISTA ?>img/carousels/packages.webp'); background-size: cover; background-position: top center;  ">
 
 
 
                     </div>
                     <div class="swiper-slide"
-                        style="background-image: url('<?php echo URL_VISTA?>img/carousels/packages.webp'); background-size: cover; background-position: top center;  ">
+                        style="background-image: url('<?php echo URL_VISTA ?>img/carousels/packages.webp'); background-size: cover; background-position: top center;  ">
 
 
                     </div>
                     <div class="swiper-slide"
-                        style="background-image: url('<?php echo URL_VISTA?>img/carousels/facility.webp'); background-size: cover; background-position: top center;  ">
+                        style="background-image: url('<?php echo URL_VISTA ?>img/carousels/facility.webp'); background-size: cover; background-position: top center;  ">
 
 
                     </div>
                     <div class="swiper-slide"
-                        style="background-image: url('<?php echo URL_VISTA?>img/carousels/classes.webp'); background-size: cover; background-position: top center;  ">
+                        style="background-image: url('<?php echo URL_VISTA ?>img/carousels/classes.webp'); background-size: cover; background-position: top center;  ">
 
 
                     </div>
@@ -87,13 +91,13 @@
         </div>
         <ul class=" mb-4 ">
             <li id="inicio" class="appear-animation " data-class-appear="appear-delay-2"><a
-                    href="<?php echo URL_SERVER?>">INICIO</a> </li>
+                    href="<?php echo URL_SERVER ?>">INICIO</a> </li>
             <li class="appear-animation" data-class-appear="appear-delay-3"><a
-                    href="<?php echo URL_SERVER?>products">TIENDA </a></li>
+                    href="<?php echo URL_SERVER ?>products">TIENDA </a></li>
             <li class="appear-animation" data-class-appear="appear-delay-4"><a
-                    href="<?php echo URL_SERVER?>#info-servicios">ASESORÍAS</a></li>
+                    href="<?php echo URL_SERVER ?>#info-servicios">ASESORÍAS</a></li>
             <li class="appear-animation" data-class-appear="appear-delay-5"> <a
-                    href="<?php echo URL_SERVER?>#contacto-info">CONTACTO</a></li>
+                    href="<?php echo URL_SERVER ?>#contacto-info">CONTACTO</a></li>
             <li class="appear-animation" data-class-appear="appear-delay-6">
                 <div class="mobile-nav__has-sublist">
                     <button id="collapse" type="button" aria-controls="Linklist-6"
@@ -126,23 +130,23 @@
                 <ul class="mobile-nav__sublist">
                     <li class="mobile-nav__item">
                         <div class="mobile-nav__child-item">
-                            <a href="<?php echo URL_SERVER?>products?category=perdidapeso">Control de peso </a>
+                            <a href="<?php echo URL_SERVER ?>products?category=perdidapeso">Control de peso </a>
                         </div>
                     </li>
                     <li class="mobile-nav__item">
                         <div class="mobile-nav__child-item">
 
-                            <a href="<?php echo URL_SERVER?>products?category=modulosproteicos">Ganar masa muscular </a>
+                            <a href="<?php echo URL_SERVER ?>products?category=modulosproteicos">Ganar masa muscular </a>
                         </div>
                     </li>
                     <li class="mobile-nav__item">
                         <div class="mobile-nav__child-item">
-                            <a href="<?php echo URL_SERVER?>products?category=hipercaloricos">Hipercalóricos</a>
+                            <a href="<?php echo URL_SERVER ?>products?category=hipercaloricos">Hipercalóricos</a>
                         </div>
                     </li>
                     <li class="mobile-nav__item">
                         <div class="mobile-nav__child-item">
-                            <a href="<?php echo URL_SERVER?>products?category=energiarecuperacion">Aminoácidos</a>
+                            <a href="<?php echo URL_SERVER ?>products?category=energiarecuperacion">Aminoácidos</a>
                         </div>
                     </li>
                 </ul>
