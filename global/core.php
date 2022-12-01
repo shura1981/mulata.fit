@@ -9,9 +9,9 @@ date_default_timezone_set('America/Bogota');
 
 // echo $_SERVER['DOCUMENT_ROOT'];
 // $PATH_UPLOAD=$_SERVER['DOCUMENT_ROOT'].'/mulata.fit/public/uploads/';
-const URL_SERVER="http://localhost:88/mulata.fit/";
-const URL_VISTA="http://localhost:88/mulata.fit/public/";
-const URL_BLOG="http://localhost:88/mulata.fit/blog/";
+const URL_SERVER="http://localhost:88/";
+const URL_VISTA="http://localhost:88/public/";
+const URL_BLOG="http://localhost:88/blog/";
 
 // const URL_SERVER="http://172.16.2.172/mulata.fit/";
 // const URL_VISTA="http://172.16.2.172/mulata.fit/public/";
