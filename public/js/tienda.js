@@ -1288,9 +1288,9 @@ const loadZoom = () => {
 
 
 const clickSwiper = {
-  0: "https://nutramerican.com/producto/biproclassic_vainilla2l",
-  1: "https://nutramerican.com/producto/bipro_classic_cookies_cream3lB",
-  2: "https://nutramerican.com/producto/burnerstack_"
+  0: "https://nutramerican.com/producto/biproclassic_pinacolada3l",
+  1: "https://nutramerican.com/producto/burnerstacklata",
+  2: "https://nutramerican.com/producto/myth"
 }
 
 

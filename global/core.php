@@ -8,9 +8,9 @@ date_default_timezone_set('America/Bogota');
 // const URL_BLOG="https://mulata.fit/blog/";
 
 
-const URL_SERVER="http://localhost:88/";
-const URL_VISTA="http://localhost:88/public/";
-const URL_BLOG="http://localhost:88/blog/";
+const URL_SERVER="http://localhost/mulata.fit/";
+const URL_VISTA="http://localhost/mulata.fit/public/";
+const URL_BLOG="http://localhost/mulata.fit/blog/";
 
 
 

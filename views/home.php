@@ -86,7 +86,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 px-md-5 observer" data-observer-transition="show">
-                        <h1 class="text-dark">
+                        <h1 class="title-color-pink">
                             <strong>Bienvenidos</strong>
                         </h1>
                         <p>
@@ -1342,6 +1342,10 @@
     </footer>
     <?php include "./views/partials/particules.php" ?>
     <?php include "./views/partials/schema_home.php" ?>
+    <script>
+           const link =
+        <?= json_encode(URL_SERVER,JSON_HEX_QUOT | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_NUMERIC_CHECK) ?>;
+    </script>
 </body>
 
 </html>

@@ -394,7 +394,7 @@ function abrirPlanPremiun() {
 }
 
 function showModalPopUp() {
-  popUpObj = window.open("http://localhost/mulata.fit/vista/js/post1.html",
+  popUpObj = window.open("https://mulata.fit/vista/js/post1.html",
     "ModalPopUp",
     "width=" + screen.availWidth / 2 + ",height=" + screen.availHeight);
 }
@@ -422,6 +422,7 @@ function openInfo() {
   // const url = host + "videos/preguntas.mp4" + "?v=" + version;
   // const urlPoster = host + "videos/preguntasposter.webp" + "?v=" + version;
   const url = host + "instagram/presentation.html" + "?v=" + version;
+  
   Swal.fire({
     html: `
 <div class="container py-3">

@@ -14,13 +14,14 @@ li {
 
 /* menú  - nav*/
 .nav-animated {
-
-  background-color: var(--footer) !important;
+  background-color: #171717d9 !important;
+  /* background-color: var(--footer) !important; */
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
   padding-top: .5625rem;
   /* justify-content: space-between !important; */
   /* height: 80px !important; */
   padding: 1.5rem 1rem !important;
+  backdrop-filter: blur(10px);
 }
 
 .nav-item {
@@ -161,6 +162,18 @@ li.menu:hover:before {
 
   #menu-bar {
     display: flex;
+    position: relative;
+  }
+
+  #menu-bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: red; */
+    z-index: 1;
   }
 }
 
@@ -415,10 +428,11 @@ ul.submenu li:hover {
   height: 100%;
   right: -100%;
   width: 60vw;
-  background: #fff;
+  background: #111111;
   padding: 2rem 1rem;
   padding-top: 4rem;
-  background: conic-gradient(at top right, #e0e0e0, #fff);
+  /* background: conic-gradient(at top right, #e0e0e0, #fff); */
+  background: conic-gradient(at top right, #000000, #262626);
   color: var(--colorPrimary);
   max-width: 300px;
   transition: all .4s ease;
@@ -440,6 +454,7 @@ ul.submenu li:hover {
   border: none;
   font-size: inherit;
   color: var(--colorPrimary);
+  background: transparent;
 }
 
 .menu-panel .show {

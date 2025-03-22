@@ -10,7 +10,7 @@ async function modalMenu(evt) {
     const target = evt.target;
     console.log(target.nodeName);
     if ((target.nodeName == "DIV" && !target.classList.contains("modal"))
-        || target.nodeName == 'SPAN' || target.nodeName == 'LI' ||
+        || target.nodeName == 'LI' ||
         target.nodeName == 'UL' || (target.nodeName == 'svg' && target.classList.contains("icon"))) return null;
 
     const list = document.querySelectorAll(".appear-animation");
